@@ -1,4 +1,5 @@
 export default function Funded() {
+  const entityTitle = "Tincre";
   return (
     <div>
       <title>Funded</title>
@@ -21,7 +22,7 @@ export default function Funded() {
                 <img
                   className="h-8"
                   src="/logos/plain-indigo.svg"
-                  alt=""
+                  alt={`The ${entityTitle} logo`}
                   width="auto"
                   height="2rem"
                 />
@@ -109,7 +110,7 @@ export default function Funded() {
                 <img
                   className="object-cover w-full rounded-xl"
                   src="/images/indigo-600-square.png"
-                  alt=""
+                  alt="Hero image"
                 />
               </div>
               <button className="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
@@ -141,7 +142,7 @@ export default function Funded() {
                   <img
                     className="h-8"
                     src="/logos/plain-indigo.svg"
-                    alt=""
+                    alt={`${entityTitle} logo`}
                     width="auto"
                   />
                 </a>
@@ -694,7 +695,45 @@ export default function Funded() {
                   <img
                     className="mb-2 h-12 w-12 object-cover rounded-full"
                     src="/images/indigo-500-avatar.png"
-                    alt=""
+                    alt="Avatar image"
+                  />
+                  <p className="text-2xl font-bold font-heading">
+                    Danny Bailey
+                  </p>
+                  <p className="text-lg text-gray-400">CEO &amp; Founder</p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <p className="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean dignissim quam ultricies, placerat tellus sed,
+                    laoreet orci. Duis luctus quam ac metus gravida sodales. Sed
+                    a ex accumsan, pellentesque sem eget, scelerisque dolor.
+                  </p>
+                  <img
+                    className="mb-2 h-12 w-12 object-cover rounded-full"
+                    src="/images/indigo-500-avatar.png"
+                    alt="Avatar image"
+                  />
+                  <p className="text-2xl font-bold font-heading">
+                    Danny Bailey
+                  </p>
+                  <p className="text-lg text-gray-400">CEO &amp; Founder</p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <p className="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aenean dignissim quam ultricies, placerat tellus sed,
+                    laoreet orci. Duis luctus quam ac metus gravida sodales. Sed
+                    a ex accumsan, pellentesque sem eget, scelerisque dolor.
+                  </p>
+                  <img
+                    className="mb-2 h-12 w-12 object-cover rounded-full"
+                    src="/images/indigo-500-avatar.png"
+                    alt="Avatar image"
                   />
                   <p className="text-2xl font-bold font-heading">
                     Danny Bailey
@@ -732,7 +771,7 @@ export default function Funded() {
                   <img
                     className="mb-2 h-12 w-12 object-cover rounded-full"
                     src="/images/indigo-500-avatar.png"
-                    alt=""
+                    alt="Avatar image"
                   />
                   <p className="text-2xl font-bold font-heading">
                     Danny Bailey
@@ -751,45 +790,7 @@ export default function Funded() {
                   <img
                     className="mb-2 h-12 w-12 object-cover rounded-full"
                     src="/images/indigo-500-avatar.png"
-                    alt=""
-                  />
-                  <p className="text-2xl font-bold font-heading">
-                    Danny Bailey
-                  </p>
-                  <p className="text-lg text-gray-400">CEO &amp; Founder</p>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <p className="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean dignissim quam ultricies, placerat tellus sed,
-                    laoreet orci. Duis luctus quam ac metus gravida sodales. Sed
-                    a ex accumsan, pellentesque sem eget, scelerisque dolor.
-                  </p>
-                  <img
-                    className="mb-2 h-12 w-12 object-cover rounded-full"
-                    src="/images/indigo-500-avatar.png"
-                    alt=""
-                  />
-                  <p className="text-2xl font-bold font-heading">
-                    Danny Bailey
-                  </p>
-                  <p className="text-lg text-gray-400">CEO &amp; Founder</p>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <p className="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean dignissim quam ultricies, placerat tellus sed,
-                    laoreet orci. Duis luctus quam ac metus gravida sodales. Sed
-                    a ex accumsan, pellentesque sem eget, scelerisque dolor.
-                  </p>
-                  <img
-                    className="mb-2 h-12 w-12 object-cover rounded-full"
-                    src="/images/indigo-500-avatar.png"
-                    alt=""
+                    alt="Avatar image"
                   />
                   <p className="text-2xl font-bold font-heading">
                     Danny Bailey
@@ -1044,7 +1045,7 @@ export default function Funded() {
                       <img
                         className="md:w-full h-52 object-cover rounded-lg"
                         src="/images/indigo-600-square.png"
-                        alt=""
+                        alt="Avatar image"
                       />
                     </div>
                     <div className="w-full md:w-3/5 px-4">
@@ -1069,7 +1070,7 @@ export default function Funded() {
                       <img
                         className="md:w-full h-52 object-cover rounded-lg"
                         src="/images/indigo-600-square.png"
-                        alt=""
+                        alt="Avatar image"
                       />
                     </div>
                     <div className="w-full md:w-3/5 px-4">
@@ -1094,7 +1095,7 @@ export default function Funded() {
                       <img
                         className="md:w-full h-52 object-cover rounded-lg"
                         src="/images/indigo-600-square.png"
-                        alt=""
+                        alt="Avatar image"
                       />
                     </div>
                     <div className="w-full md:w-3/5 px-4">
@@ -1119,7 +1120,7 @@ export default function Funded() {
                       <img
                         className="md:w-full h-52 object-cover rounded-lg"
                         src="/images/indigo-600-square.png"
-                        alt=""
+                        alt="Avatar image"
                       />
                     </div>
                     <div className="w-full md:w-3/5 px-4">
@@ -1601,7 +1602,7 @@ export default function Funded() {
                   <img
                     className="h-8"
                     src="/logos/plain-indigo.svg"
-                    alt=""
+                    alt={`${entityTitle} logo`}
                     width="auto"
                     height="2rem"
                   />
@@ -1613,19 +1614,28 @@ export default function Funded() {
               <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
                 <div className="mb-4 flex lg:justify-end">
                   <a className="inline-block mr-8" href="#">
-                    <img src="/socials/facebook.svg" />
+                    <img
+                      alt="Facebook (Meta) social link icon"
+                      src="/socials/facebook.svg"
+                    />
                   </a>
                   <a className="inline-block mr-8" href="#">
-                    <img src="/socials/twitter.svg" />
+                    <img
+                      src="/socials/twitter.svg"
+                      alt="Twitter social link icon"
+                    />
                   </a>
                   <a className="inline-block mr-8" href="#">
-                    <img src="/socials/github.svg" />
+                    <img src="/socials/github.svg" alt="Github link icon" />
                   </a>
                   <a className="inline-block mr-8" href="#">
-                    <img src="/socials/instagram.svg" />
+                    <img
+                      src="/socials/instagram.svg"
+                      alt="Instagram link icon"
+                    />
                   </a>
                   <a className="inline-block" href="#">
-                    <img src="/socials/linkedin.svg" />
+                    <img src="/socials/linkedin.svg" alt="LinkedIn link icon" />
                   </a>
                 </div>
               </div>
