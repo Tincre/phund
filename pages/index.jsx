@@ -1,10 +1,10 @@
 function Index() {
   return (
     <div className="w-full h-screen flex items-center justify-center">
-      <p>
+      <h1>
         Welcome to your <span className="font-bold italic"> funded </span>{" "}
         instance!
-      </p>
+      </h1>
     </div>
   );
 }
