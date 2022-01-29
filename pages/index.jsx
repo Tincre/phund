@@ -1,21 +1,23 @@
 export default function Funded() {
   const entityTitle = "Tincre";
+  const title = `Funded, by ${entityTitle}`;
+  const description =
+    "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre.";
+  const author = "Tincre Engineering, https://tincre.com";
   return (
     <div>
-      <title>Funded</title>
+      <title>{title}</title>
       <meta charSet="utf-8" />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
-      <meta
-        name="description"
-        content="An Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre."
-      />
-      <meta name="author" content="Tincre Engineering, https://tincre.com" />
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
+      <meta name="author" content={author} />
 
       <div>
-        <section id="navigation">
+        <section id="navigation-hero">
           <div className="container px-4 mx-auto">
             <nav className="flex justify-between items-center py-8">
               <a className="text-gray-700 text-2xl leading-none" href="#">
@@ -215,7 +217,7 @@ export default function Funded() {
             </nav>
           </div>
         </section>
-        <section className="py-20">
+        <section id="stats-1" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap items-center -mx-4 -mb-8">
               <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
@@ -309,7 +311,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="why-invest" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -mx-4">
               <div className="w-full lg:w-1/2 px-4">
@@ -373,7 +375,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="bg-indigo-500 py-20">
+        <section id="fact-cards" className="bg-indigo-500 py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap -m-4">
               <div className="w-full lg:w-1/2 p-4">
@@ -463,7 +465,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="stats-2" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap items-center -mx-4 -mb-8">
               <div className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 text-center">
@@ -637,7 +639,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="why-invest" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="max-w-xl lg:max-w-3xl mx-auto text-center">
               <span className="text-xs font-semibold text-indigo-500 uppercase">
@@ -668,7 +670,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="fact-snippets" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
               <span className="text-sm text-indigo-500 font-bold uppercase">
@@ -801,7 +803,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20 bg-indigo-500">
+        <section id="info-carousel" className="py-20 bg-indigo-500">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap items-center">
               <button className="hidden lg:block w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-white transition duration-200">
@@ -861,7 +863,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="considerations" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="max-w-2xl mx-auto">
               <h2 className="mb-12 text-3xl font-bold font-heading">
@@ -1022,7 +1024,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="team" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="max-w-lg lg:max-w-2xl mx-auto text-center mb-12 lg:mb-16">
               <span className="text-xs font-semibold text-indigo-500 uppercase">
@@ -1141,7 +1143,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="faq" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="mb-16 text-center">
               <span className="text-xs font-semibold text-indigo-500 uppercase">
@@ -1419,7 +1421,7 @@ export default function Funded() {
             </div>
           </div>
         </section>
-        <section className="py-20">
+        <section id="footer" className="py-20">
           <div className="container px-4 mx-auto">
             <div className="flex flex-wrap">
               <div className="w-full lg:w-3/5 flex flex-wrap">
