@@ -4,11 +4,13 @@ import { render, screen } from "@testing-library/react";
 import Index from "../pages/index";
 
 describe("Index", () => {
-  it("renders a heading", () => {
+  it("should render the page", () => {
     render(<Index />);
 
-    const heading = screen.getByRole("heading");
+    const headingArray = screen.getAllByRole("heading");
 
-    expect(heading).toBeInTheDocument();
+    headingArray.map((heading) => {
+      expect(heading).toBeInTheDocument();
+    });
   });
 });
