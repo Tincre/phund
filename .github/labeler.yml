@@ -1,0 +1,45 @@
+# The github labeling workflow bot
+documentation:
+    - ./README.md
+    - ./*.md
+
+test:
+    - __test__/* 
+    - ./*.test.js 
+    - stories/*.test.js 
+
+packaging:
+    - package.json
+
+build:
+    - package-lock.json
+
+configuration:
+    - .storybook
+    - .prettierrc.js
+    - .eslintrc.js
+    - postcss.config.js
+    - tailwind.config.js
+
+storybook:
+    - .storybook/
+
+component:
+    - stories/*.js
+    - components/*.js
+
+css:
+    - styles/*
+    - tailwind.config.js
+
+artist-facing:
+    - pages/*
+    - components/*
+
+engineering:
+    - lib/*
+
+application:
+    - pages/*
+    - components/*
+    - lib/*
