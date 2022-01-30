@@ -5,7 +5,6 @@ import FactCards from "../components/Sections/FactCards";
 import Stats1 from "../components/Sections/Stats1";
 import FactSnippets from "../components/Sections/FactSnippets";
 import InfoBlock from "../components/Sections/InfoBlock";
-import Considerations from "../components/Sections/Considerations";
 import Team from "../components/Sections/Team";
 import FAQ from "../components/Sections/FAQ";
 
@@ -257,7 +256,12 @@ export default function Funded() {
           teamCardContent={teamCardContent}
         />
         <FAQ fAQCardContent={fAQCardContent} />
-        <Considerations />
+        <InfoBlock
+          title="One investment to rule them all."
+          description="Don't miss this opportunity to clean up your horrific past performance and log a win in your P&L. Plus, all your friends will just love doing the same. A win win, by any measure."
+          cta={`Do one good thing before you croak: invest in ${entityTitle}`}
+          ctaHref="#invest"
+        />
         <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
       </div>
     </div>
