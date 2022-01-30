@@ -1,114 +1,27 @@
-export default function Footer({ entityTitle, logoSrc }) {
+import FooterColumn from "./FooterColumn";
+import Image from "next/image";
+
+export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
   return (
     <section id="footer" className="py-20">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full lg:w-3/5 flex flex-wrap">
-            <div className="w-1/2 lg:w-1/4 mb-8">
-              <h3 className="mb-4 text-lg font-bold font-heading">Company</h3>
-              <ul className="text-sm">
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    About Us
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Careers
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Press
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="w-1/2 lg:w-1/4 mb-8">
-              <h3 className="mb-4 text-lg font-bold font-heading">Pages</h3>
-              <ul className="text-sm">
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Login
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Register
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Add list
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="w-1/2 lg:w-1/4 mb-8">
-              <h3 className="mb-4 text-lg font-bold font-heading">Legal</h3>
-              <ul className="text-sm">
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Terms
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    About Us
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Team
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Privacy
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="w-1/2 lg:w-1/4 mb-8">
-              <h3 className="mb-4 text-lg font-bold font-heading">Resources</h3>
-              <ul className="text-sm">
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Blog
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Service
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Product
-                  </a>
-                </li>
-                <li className="mb-2">
-                  <a className="text-indigo-500 hover:text-indigo-700" href="#">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {footerItems?.map((props, index) => (
+              <FooterColumn {...props} key={`${index}-footer-column`} />
+            ))}
           </div>
-          <div className="order-first lg:order-last mb-10 lg:mb-0 w-full lg:w-2/5">
+          <div className="order-first lg:order-last mb-10 lg:mb-0 w-full lg:w-2/5 lg:text-right">
             <h3 className="mb-4 text-lg font-bold font-heading">Subscribe</h3>
             <p className="mb-5 text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Stay informed with our updates via our blog,{" "}
+              <a
+                className="text-gray-700 hover:font-bold hover:underline hover:text-indigo-700"
+                href="https://slightlysharpe.com"
+              >
+                Slighly Sharpe
+              </a>
+              .
             </p>
             <input
               className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border border-2 rounded"
@@ -116,7 +29,7 @@ export default function Footer({ entityTitle, logoSrc }) {
               placeholder="Type your e-mail"
             />
             <button className="inline-block px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200">
-              Action
+              Sign up
             </button>
           </div>
         </div>
@@ -140,27 +53,23 @@ export default function Footer({ entityTitle, logoSrc }) {
           </div>
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
             <div className="mb-4 flex lg:justify-end">
-              <a className="inline-block mr-8" href="#">
-                <img
-                  alt="Facebook (Meta) social link icon"
-                  src="/socials/facebook.svg"
-                />
-              </a>
-              <a className="inline-block mr-8" href="#">
-                <img
-                  src="/socials/twitter.svg"
-                  alt="Twitter social link icon"
-                />
-              </a>
-              <a className="inline-block mr-8" href="#">
-                <img src="/socials/github.svg" alt="Github link icon" />
-              </a>
-              <a className="inline-block mr-8" href="#">
-                <img src="/socials/instagram.svg" alt="Instagram link icon" />
-              </a>
-              <a className="inline-block" href="#">
-                <img src="/socials/linkedin.svg" alt="LinkedIn link icon" />
-              </a>
+              {socials?.map(({ displayText, href }, index) => (
+                <a
+                  className="flex leading-loose my-4 block text-sm text-gray-700 transform hover:scale-110 mr-4 lg:ml-4"
+                  href={href}
+                  key={href}
+                  rel="noopener noreferrer"
+                >
+                  <div className="ml-auto md:m-auto text-center relative h-8 w-8">
+                    <Image
+                      className="hover:text-red-700"
+                      layout="fill"
+                      alt={displayText}
+                      src={`/images/${displayText.toLowerCase()}.svg`}
+                    />
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
           <p className="lg:hidden text-sm text-gray-500">
