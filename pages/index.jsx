@@ -17,6 +17,11 @@ export default function Funded() {
   const description =
     "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre.";
   const author = "Tincre Engineering, https://tincre.com";
+  const navigationLinks = [`Investing in ${entityTitle}`, "About", "The Team"];
+  const navigationHrefs = ["#why-invest-part-1", "#fact-snippets", "#team"];
+  const cta = "Invest";
+  const logoSrc =
+    "https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg";
   return (
     <div>
       <title>{title}</title>
@@ -30,7 +35,12 @@ export default function Funded() {
       <meta name="author" content={author} />
 
       <div>
-        <NavigationHero entityTitle={entityTitle} />
+        <NavigationHero
+          entityTitle={entityTitle}
+          navigationLinks={navigationLinks}
+          navigationHrefs={navigationHrefs}
+          cta={cta}
+        />
         <Stats1 />
         <WhyInvest1 />
         <FactCards />
@@ -41,7 +51,7 @@ export default function Funded() {
         <Considerations />
         <Team />
         <FAQ />
-        <Footer entityTitle={entityTitle} />
+        <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
       </div>
     </div>
   );
