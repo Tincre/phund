@@ -130,6 +130,31 @@ export default function Funded() {
       subTitle: "Performance category",
     },
   ];
+  const teamCardContent = [
+    {
+      name: "Philip Muellerschoen",
+      position: "CEO, Co-Founder",
+      description:
+        "Phil guides the firm in all aspects both internally and externally, operating and growing its brands.",
+      imageSrc: "/team/phil.webp",
+      imageAlt: "Philip Muellerschoen",
+    },
+    {
+      name: "Jason R. Stevens, CFA",
+      position: "CTO+CFO, Co-Founder",
+      description:
+        "Anti-script kiddie crushing the keys to build an entirely new world in which he owns all human-associated items.",
+      imageSrc: "/team/jason.webp",
+      imageAlt: "Jason R. Stevens, CFA",
+    },
+    {
+      name: "Dan Fratoni",
+      position: "Partner, External Brand Relationships",
+      description: "Drives entertainment industry representation for the firm.",
+      imageSrc: "/team/dan.webp",
+      imageAlt: "Dan Fratoni",
+    },
+  ];
   return (
     <div>
       <title>{title}</title>
@@ -169,7 +194,12 @@ export default function Funded() {
           cta="Invest in Tincre"
           ctaHref="#invest"
         />
-        <Team />
+        <Team
+          title="Superior people build superior businesses"
+          subTitle="Better People"
+          description="Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class."
+          teamCardContent={teamCardContent}
+        />
         <FAQ />
         <Considerations />
         <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
