@@ -58,7 +58,7 @@ function MobileNavbar({ entityTitle, navigationLinks, navigationHrefs, cta }) {
               try {
                 const href = navigationHrefs[index];
                 return (
-                  <li className="mb-1">
+                  <li className="mb-1" key={navName + `${index}`}>
                     <MobileNavigationItem href={href}>
                       {navName}
                     </MobileNavigationItem>
@@ -116,11 +116,11 @@ function Navbar({ entityTitle, navigationLinks, navigationHrefs, cta }) {
         </button>
       </div>
       <ul className="hidden lg:flex ml-auto mr-10 items-center w-auto space-x-12">
-        {navigationLinks.map((navName, index) => {
+        {navigationLinks?.map((navName, index) => {
           try {
             const href = navigationHrefs[index];
             return (
-              <li>
+              <li key={navName + `${index}`}>
                 <NavigationItem href={href}>{navName}</NavigationItem>
               </li>
             );
