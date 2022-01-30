@@ -155,6 +155,62 @@ export default function Funded() {
       imageAlt: "Dan Fratoni",
     },
   ];
+  const fAQCardContent = [
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+    {
+      title: "How do you accomplish so much?",
+      listItems: [
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+        { text: "Work hard, play hard", href: "https://tincre.com" },
+      ],
+    },
+  ];
   return (
     <div>
       <title>{title}</title>
@@ -200,7 +256,7 @@ export default function Funded() {
           description="Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class."
           teamCardContent={teamCardContent}
         />
-        <FAQ />
+        <FAQ fAQCardContent={fAQCardContent} />
         <Considerations />
         <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
       </div>
