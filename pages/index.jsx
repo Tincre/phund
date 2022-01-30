@@ -4,7 +4,7 @@ import WhyInvest from "../components/Sections/WhyInvest";
 import FactCards from "../components/Sections/FactCards";
 import Stats1 from "../components/Sections/Stats1";
 import FactSnippets from "../components/Sections/FactSnippets";
-import InfoCarousel from "../components/Sections/InfoCarousel";
+import InfoBlock from "../components/Sections/InfoBlock";
 import Considerations from "../components/Sections/Considerations";
 import Team from "../components/Sections/Team";
 import FAQ from "../components/Sections/FAQ";
@@ -163,7 +163,12 @@ export default function Funded() {
           cta2Href="#login"
           factSnippetsCardContent={factSnippetsCardContent}
         />
-        <InfoCarousel />
+        <InfoBlock
+          title="Actually make some money on a new venture, for once."
+          description="A short message that will bring potential investors into your company's world. And one that will allow them to become more familiar with your story."
+          cta="Invest in Tincre"
+          ctaHref="#invest"
+        />
         <Team />
         <FAQ />
         <Considerations />
