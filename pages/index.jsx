@@ -3,7 +3,6 @@ import NavigationHero from "../components/Sections/NavigationHero";
 import WhyInvest1 from "../components/Sections/WhyInvest1";
 import FactCards from "../components/Sections/FactCards";
 import Stats1 from "../components/Sections/Stats1";
-import Stats2 from "../components/Sections/Stats2";
 import WhyInvest2 from "../components/Sections/WhyInvest2";
 import FactSnippets from "../components/Sections/FactSnippets";
 import InfoCarousel from "../components/Sections/InfoCarousel";
@@ -110,7 +109,7 @@ export default function Funded() {
         <Stats1 data={stats1Data} />
         <WhyInvest1 {...whyInvest1Content} />
         <FactCards factCardsContent={factCardsContent} />
-        <Stats2 />
+        <Stats1 stats1Data={stats1Data} />
         <WhyInvest2 />
         <FactSnippets />
         <InfoCarousel />
