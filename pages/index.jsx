@@ -210,6 +210,94 @@ export default function Funded() {
       ],
     },
   ];
+  const footerItems = [
+    {
+      title: "Company",
+      footerColumnItems: [
+        {
+          text: `About ${entityTitle}`,
+          href: "https://tincre.com/",
+        },
+        {
+          text: `Team`,
+          href: "https://tincre.com/about",
+        },
+        {
+          text: "Brands",
+          href: "https://tincre.com/#our-brands",
+        },
+        {
+          text: "Blog",
+          href: "https://slightlysharpe.com",
+        },
+      ],
+    },
+    {
+      title: "Legal",
+      footerColumnItems: [
+        {
+          text: `About ${entityTitle}`,
+          href: "https://tincre.com/",
+        },
+        {
+          text: `Team`,
+          href: "https://tincre.com/about",
+        },
+        {
+          text: "Brands",
+          href: "https://tincre.com/#our-brands",
+        },
+      ],
+    },
+    {
+      title: "Product Categories",
+      footerColumnItems: [
+        {
+          text: `About ${entityTitle}`,
+          href: "https://tincre.com/",
+        },
+        {
+          text: `Team`,
+          href: "https://tincre.com/about",
+        },
+        {
+          text: "Brands",
+          href: "https://tincre.com/#our-brands",
+        },
+      ],
+    },
+    {
+      title: "Development",
+      footerColumnItems: [
+        {
+          text: `About ${entityTitle}`,
+          href: "https://tincre.com/",
+        },
+        {
+          text: `Team`,
+          href: "https://tincre.com/about",
+        },
+        {
+          text: "Brands",
+          href: "https://tincre.com/#our-brands",
+        },
+      ],
+    },
+  ];
+  const socials = [
+    {
+      href: "https://twitter.com/tincre",
+      displayText: "Twitter",
+    },
+    {
+      href: "https://linkedin.com/company/tincre",
+      displayText: "LinkedIn",
+    },
+    {
+      href: "https://instagram.com/webslastmile",
+      displayText: "Instagram",
+    },
+  ];
   return (
     <div>
       <title>{title}</title>
@@ -262,7 +350,12 @@ export default function Funded() {
           cta={`Do one good thing before you croak: invest in ${entityTitle}`}
           ctaHref="#invest"
         />
-        <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
+        <Footer
+          entityTitle={entityTitle}
+          logoSrc={logoSrc}
+          footerItems={footerItems}
+          socials={socials}
+        />
       </div>
     </div>
   );
