@@ -56,7 +56,38 @@ export default function Funded() {
       "Hyper-efficient semi-autonomous subsidiaries crafted for corporate accretive acquisitions.",
     ],
   };
-
+  const factCardsContent = [
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+    {
+      title: "This is a bold, awesome fact",
+      description:
+        "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
+    },
+  ];
   return (
     <div>
       <title>{title}</title>
@@ -78,7 +109,7 @@ export default function Funded() {
         />
         <Stats1 data={stats1Data} />
         <WhyInvest1 {...whyInvest1Content} />
-        <FactCards />
+        <FactCards factCardsContent={factCardsContent} />
         <Stats2 />
         <WhyInvest2 />
         <FactSnippets />
