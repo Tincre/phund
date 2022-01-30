@@ -14,7 +14,22 @@ export default function FactSnippets({}) {
             Pellentesque massa nibh, pulvinar vitae aliquet nec, accumsan
             aliquet orci.
           </p>
+          <div className="mt-8">
+            <a
+              className="block md:inline-block px-5 py-3 md:mr-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+              href="#"
+            >
+              Try Demo
+            </a>
+            <a
+              className="block md:inline-block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+              href="#"
+            >
+              Share with your friends
+            </a>
+          </div>
         </div>
+
         <div className="flex flex-wrap items-center justify-around -m-4">
           <div className="w-full md:w-1/2 lg:w-1/3 p-4">
             <div className="bg-gray-50 p-6 rounded-lg">
