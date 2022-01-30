@@ -9,7 +9,7 @@ export default function WhyInvest({
   whyInvestCardData,
 }) {
   return (
-    <section id="why-invest-part-1" className="py-20">
+    <section id="why-invest" className="py-20">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap -mx-4">
           <WhyInvestHero
