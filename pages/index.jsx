@@ -1,9 +1,8 @@
 import Footer from "../components/Footer";
 import NavigationHero from "../components/Sections/NavigationHero";
-import WhyInvest1 from "../components/Sections/WhyInvest1";
+import WhyInvest from "../components/Sections/WhyInvest";
 import FactCards from "../components/Sections/FactCards";
 import Stats1 from "../components/Sections/Stats1";
-import WhyInvest2 from "../components/Sections/WhyInvest2";
 import FactSnippets from "../components/Sections/FactSnippets";
 import InfoCarousel from "../components/Sections/InfoCarousel";
 import Considerations from "../components/Sections/Considerations";
@@ -43,13 +42,13 @@ export default function Funded() {
       text: "A giant achievement",
     },
   ];
-  const whyInvest1Content = {
+  const whyInvestContent = {
     subTitle: "Scaling our formula",
     title: "We're seeking investment to release more kick ass brands",
     description:
       "Our formula for success works and we are scaling it by releasing brands in financial services, non-profit fundraising, and fashion.",
     cta: "Learn about our SAFE note",
-    whyInvest1CardData: [
+    whyInvestCardData: [
       "The most epic management team in the business of the web.",
       "Can't stop won't stop.",
       "Hyper-efficient semi-autonomous subsidiaries crafted for corporate accretive acquisitions.",
@@ -107,10 +106,9 @@ export default function Funded() {
           cta={cta}
         />
         <Stats1 data={stats1Data} />
-        <WhyInvest1 {...whyInvest1Content} />
+        <WhyInvest {...whyInvestContent} />
         <FactCards factCardsContent={factCardsContent} />
-        <Stats1 stats1Data={stats1Data} />
-        <WhyInvest2 />
+        <Stats1 data={stats1Data} />
         <FactSnippets />
         <InfoCarousel />
         <Considerations />
