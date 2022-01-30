@@ -30,7 +30,10 @@ export default function Hero({ heading, subHeading, cta1, cta2, imageSrc }) {
           alt="Hero image"
         />
       </div>
-      <button className="block mt-10 lg:mt-20 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100">
+      <a
+        href="#why-invest"
+        className="block mt-8 lg:mt-12 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
+      >
         <svg
           className="mx-auto text-indigo-500"
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +48,7 @@ export default function Hero({ heading, subHeading, cta1, cta2, imageSrc }) {
             d="M19 9l-7 7-7-7"
           />
         </svg>
-      </button>
+      </a>
     </div>
   );
 }
