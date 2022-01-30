@@ -22,6 +22,29 @@ export default function Funded() {
   const cta = "Invest";
   const logoSrc =
     "https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg";
+  const stats1Data = [
+    {
+      icon: "",
+      numberStat: "30,000,000",
+      text: "A giant achievement",
+    },
+    {
+      icon: "",
+      numberStat: "30,000,000",
+      text: "A giant achievement",
+    },
+    {
+      icon: "",
+      numberStat: "30,000,000",
+      text: "A giant achievement",
+    },
+    {
+      icon: "",
+      numberStat: "30,000,000",
+      text: "A giant achievement",
+    },
+  ];
+
   return (
     <div>
       <title>{title}</title>
@@ -41,7 +64,7 @@ export default function Funded() {
           navigationHrefs={navigationHrefs}
           cta={cta}
         />
-        <Stats1 />
+        <Stats1 data={stats1Data} />
         <WhyInvest1 />
         <FactCards />
         <Stats2 />
