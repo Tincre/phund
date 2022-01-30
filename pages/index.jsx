@@ -86,6 +86,50 @@ export default function Funded() {
         "It's like the world is stuck in a car wash and Tincre is the car. Life is now complete.",
     },
   ];
+  const factSnippetsCardContent = [
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+    {
+      description:
+        "A nice, detailed explanation of something with-respect-to this funding rounding.",
+      imageSrc: "/images/indigo-500-avatar.png",
+      title: "A Product KPI",
+      subTitle: "Performance category",
+    },
+  ];
   return (
     <div>
       <title>{title}</title>
@@ -109,11 +153,20 @@ export default function Funded() {
         <WhyInvest {...whyInvestContent} />
         <FactCards factCardsContent={factCardsContent} />
         <Stats1 data={stats1Data} />
-        <FactSnippets />
+        <FactSnippets
+          title="Learn about the most awesome company on the floating rock we all call earth"
+          subTitle="Growing Growth"
+          description="We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into Tincre."
+          cta1="Invest now"
+          cta1Href="#invest"
+          cta2="Log in"
+          cta2Href="#login"
+          factSnippetsCardContent={factSnippetsCardContent}
+        />
         <InfoCarousel />
-        <Considerations />
         <Team />
         <FAQ />
+        <Considerations />
         <Footer entityTitle={entityTitle} logoSrc={logoSrc} />
       </div>
     </div>
