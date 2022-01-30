@@ -1,4 +1,4 @@
-export default function Footer({ entityTitle }) {
+export default function Footer({ entityTitle, logoSrc }) {
   return (
     <section id="footer" className="py-20">
       <div className="container px-4 mx-auto">
@@ -111,7 +111,7 @@ export default function Footer({ entityTitle }) {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <input
-              className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border rounded"
+              className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border border-2 rounded"
               type="email"
               placeholder="Type your e-mail"
             />
@@ -127,15 +127,15 @@ export default function Footer({ entityTitle }) {
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
             <a className="text-gray-600 text-2xl leading-none" href="#">
               <img
-                className="h-8"
-                src="/logos/plain-indigo.svg"
+                className="h-16"
+                src={logoSrc}
                 alt={`${entityTitle} logo`}
                 width="auto"
-                height="2rem"
+                height="4rem"
               />
             </a>
             <p className="hidden lg:block mt-3 text-sm text-gray-500">
-              All rights reserved. © Plain Inc. 2022
+              {`All rights reserved. © ${entityTitle} 2022`}
             </p>
           </div>
           <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
@@ -164,7 +164,7 @@ export default function Footer({ entityTitle }) {
             </div>
           </div>
           <p className="lg:hidden text-sm text-gray-500">
-            All rights reserved. © Plain Inc. 2022
+            {`All rights reserved. © ${entityTitle} 2022`}
           </p>
         </div>
       </div>
