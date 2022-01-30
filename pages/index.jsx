@@ -44,6 +44,18 @@ export default function Funded() {
       text: "A giant achievement",
     },
   ];
+  const whyInvest1Content = {
+    subTitle: "Scaling our formula",
+    title: "We're seeking investment to release more kick ass brands",
+    description:
+      "Our formula for success works and we are scaling it by releasing brands in financial services, non-profit fundraising, and fashion.",
+    cta: "Learn about our SAFE note",
+    whyInvest1CardData: [
+      "The most epic management team in the business of the web.",
+      "Can't stop won't stop.",
+      "Hyper-efficient semi-autonomous subsidiaries crafted for corporate accretive acquisitions.",
+    ],
+  };
 
   return (
     <div>
@@ -65,7 +77,7 @@ export default function Funded() {
           cta={cta}
         />
         <Stats1 data={stats1Data} />
-        <WhyInvest1 />
+        <WhyInvest1 {...whyInvest1Content} />
         <FactCards />
         <Stats2 />
         <WhyInvest2 />
