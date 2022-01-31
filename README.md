@@ -39,7 +39,7 @@ be found under the `__tests__` directory and run with `yarn run test`.
 ### Content updates 
 
 Make your content changes to the `cms.data.js` file in the root of this
-repository.
+repository. In addition, you'll need to edit `siteMetadata.js` for proper SEO updating. 
 
 > ℹ We are upgrading and standardizing the naming conventions so that they may be updated without examining the component codebase. ℹ
 
