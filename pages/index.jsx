@@ -31,6 +31,8 @@ import {
   footerItems,
   socials,
   hostname,
+  teamContent,
+  factSnippetsContent,
 } from "../cms.data";
 
 export default function Funded() {
@@ -161,28 +163,12 @@ export default function Funded() {
             <FactCards factCardsContent={factCardsContent} />
             <Stats1 data={stats1Data} />
             <FactSnippets
-              title="Learn about the most awesome company on the floating rock we all call earth"
-              subTitle="Growing Growth"
-              description={`We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into ${entityTitle}.`}
-              cta1="Invest now"
-              cta1Href="#invest"
-              cta2="Log in"
-              cta2Href="#login"
+              {...factSnippetsContent}
               factSnippetsCardContent={factSnippetsCardContent}
               session={session}
             />
-            <InfoBlock
-              title="Actually make some money on a new venture, for once."
-              description="A short message that will bring potential investors into your company's world. And one that will allow them to become more familiar with your story."
-              cta={`Invest in ${entityTitle}`}
-              ctaHref="#invest"
-            />
-            <Team
-              title="Superior people build superior businesses"
-              subTitle="Better People"
-              description="Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class."
-              teamCardContent={teamCardContent}
-            />
+            <InfoBlock {...infoBlockContent} />
+            <Team teamCardContent={teamCardContent} {...teamContent} />
             <FAQ fAQCardContent={fAQCardContent} />
             <InfoBlock {...infoBlockContent} />
           </>

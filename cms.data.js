@@ -297,7 +297,23 @@ export const socials = [
     displayText : "Instagram",
   },
 ];
+export const factSnippetsContent = {
+  title :
+      "Learn about the most awesome company on the floating rock we all call earth",
+  subTitle : "Growing Growth",
+  description :
+      `We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into ${
+          entityTitle}.`,
+  cta1 : "Invest now",
+  cta1Href : "#invest",
+};
+export const teamContent = {
+  title : "Superior people build superior businesses",
+  subTitle : "Better People",
+  description :
+      "Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class.",
 
+};
 export const infoBlockContent = {
   title : "One investment to rule them all.",
   description :
