@@ -1,4 +1,13 @@
-export default function Hero({ heading, subHeading, cta1, cta2, imageSrc }) {
+import { signIn, signOut } from "next-auth/react";
+
+export default function Hero({
+  heading,
+  subHeading,
+  cta1,
+  cta2,
+  imageSrc,
+  session,
+}) {
   return (
     <div className="flex flex-wrap items-center -mx-4 mt-10 lg:my-10 pb-10 lg:pb-16">
       <div className="w-full md:w-1/2 px-4 mb-12 md:mb-0">
@@ -15,12 +24,21 @@ export default function Hero({ heading, subHeading, cta1, cta2, imageSrc }) {
           >
             {cta1}
           </a>
-          <a
-            className="block lg:inline-block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-            href="#"
-          >
-            {cta2}
-          </a>
+          {!session ? (
+            <button
+              className="block lg:inline-block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+              onClick={() => signIn()}
+            >
+              Log in
+            </button>
+          ) : (
+            <button
+              className="block lg:inline-block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+              onClick={() => signOut()}
+            >
+              Log out
+            </button>
+          )}
         </div>
       </div>
       <div className="w-full md:w-1/2 px-4">

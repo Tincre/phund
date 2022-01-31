@@ -9,6 +9,7 @@ export default function FactSnippets({
   cta1Href,
   cta2Href,
   factSnippetsCardContent,
+  session,
 }) {
   return (
     <section id="fact-snippets" className="py-20">

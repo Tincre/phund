@@ -1,11 +1,12 @@
+import { signIn, signOut } from "next-auth/react";
+
 export default function FactSnippetsHero({
   subTitle,
   title,
   description,
   cta1,
-  cta2,
   cta1Href,
-  cta2Href,
+  session,
 }) {
   return (
     <div className="max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
@@ -23,12 +24,14 @@ export default function FactSnippetsHero({
         >
           {cta1}
         </a>
-        <a
-          className="block md:inline-block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-          href={cta2Href}
-        >
-          {cta2}
-        </a>
+        {!!session ? (
+          <button
+            className="block md:inline-block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+            onClick={() => signIn()}
+          >
+            Log in
+          </button>
+        ) : null}
       </div>
     </div>
   );
