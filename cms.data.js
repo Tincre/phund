@@ -297,3 +297,12 @@ export const socials = [
     displayText : "Instagram",
   },
 ];
+
+export const infoBlockContent = {
+  title : "One investment to rule them all.",
+  description :
+      "Don't miss this opportunity to clean up your horrific past performance and log a win in your P&L. Plus, all your friends will just love doing the same. A win win, by any measure.",
+  cta : `Do one good thing before you croak: invest in ${entityTitle}`,
+  ctaHref : "#invest"
+
+}
