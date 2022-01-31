@@ -15,6 +15,22 @@ yarn run dev
 ```
 
 🚀 The dev site will be running locally at `localhost:3000` 🚀.
+
+#### Environment 
+You'll need some credentials to get up and running properly.
+
+Create a `.env` file in the same directory as your `package.json`, as follows. 
+```env
+DATABASE_URL="postgresql://<your-connection-info>"
+SHADOW_DATABASE_URL="postgresql://<your-shadow-connection-info"
+CHECKPOINT_DISABLE=1
+SIGNING_PASSPHRASE="<a-generated-passphrase>"
+NEXTAUTH_SECRET="<a-generated-passphrase>"
+EMAIL_SERVER="smtp://<your-email-smtp-info>"
+FROM_EMAIL="investors@tincre.com"
+NEXTAUTH_URL=http://localhost:3000
+```
+
 ### Tests 
 
 Tests leverage `jest` and Kent Dodd's `react testing library`. These can 
@@ -87,11 +103,11 @@ This is handled seamlessly within via the next-auth library.
 Right now we offer the following authentication providers:
 
 - direct-to-email link,
-- Google Accounts,
-- Github,
-- Gitlab,
-- Microsoft, 
-- and Twitter. 
+- (coming soon) Google Accounts,
+- (coming soon) Github,
+- (coming soon) Gitlab,
+- (coming soon) Microsoft, 
+- (coming soon) and Twitter. 
 
 We can and will add more at a later date.
 
