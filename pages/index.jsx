@@ -25,6 +25,9 @@ import {
   factCardsContent,
   factSnippetsCardContent,
   teamCardContent,
+  fAQCardContent,
+  footerItems,
+  socials,
 } from "../cms.data";
 
 export default function Funded() {
