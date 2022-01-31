@@ -1,8 +1,10 @@
-export const entityTitle = "Tincre";
-export const title = `Funded, by ${entityTitle}`;
+export const hostname = "investor.tincre.com";
+export const entityTitle = "Funded";
+export const entityUrl = "https://funded.vercel.app"
+export const title = `${entityTitle} @ ${entityUrl}`;
 export const description =
-    "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre.";
-export const author = "Tincre Engineering, https://tincre.com";
+    "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre. Raise capital the hard way.ᵀᴹ";
+export const author = `${entityTitle}, ${entityUrl}`;
 export const navigationLinks =
     [ `Investing in ${entityTitle}`, "About", "The Team" ];
 export const navigationHrefs =
@@ -149,94 +151,61 @@ export const fAQCardContent = [
   {
     title : "How much are we raising?",
     listItems : [
-      {text : "We are looking to raise a lot", href : "https://tincre.com"},
-      {
-        text : "And made it easy for you to give us money",
-        href : "https://tincre.com"
-      },
-      {text : "The terms are straightforward", href : "https://tincre.com"},
-      {
-        text : "And there's a special kicker for you",
-        href : "https://tincre.com"
-      },
+      {text : "We are looking to raise a lot", href : entityUrl},
+      {text : "And made it easy for you to give us money", href : entityUrl},
+      {text : "The terms are straightforward", href : entityUrl},
+      {text : "And there's a special kicker for you", href : entityUrl},
     ],
   },
   {
     title : "How will we use the funds?",
     listItems : [
-      {text : "Our office needs vending machines", href : "https://tincre.com"},
-      {
-        text : "To make all of our new employees happy",
-        href : "https://tincre.com"
-      },
-      {
-        text : "There also needs to be a slush fund",
-        href : "https://tincre.com"
-      },
-      {
-        text : "To market and sell out our office parties",
-        href : "https://tincre.com"
-      },
+      {text : "Our office needs vending machines", href : entityUrl},
+      {text : "To make all of our new employees happy", href : entityUrl},
+      {text : "There also needs to be a slush fund", href : entityUrl},
+      {text : "To market and sell out our office parties", href : entityUrl},
     ],
   },
   {
     title : "Why are we the right team?",
     listItems : [
-      {
-        text : "Lucy went to university and studied hard",
-        href : "https://tincre.com"
-      },
-      {
-        text : "Johnny built a business and sold it fast",
-        href : "https://tincre.com"
-      },
-      {
-        text : "Lauren learned how to code and build an app",
-        href : "https://tincre.com"
-      },
+      {text : "Lucy went to university and studied hard", href : entityUrl},
+      {text : "Johnny built a business and sold it fast", href : entityUrl},
+      {text : "Lauren learned how to code and build an app", href : entityUrl},
       {
         text : "Thomas has people skills and interned at Initech",
-        href : "https://tincre.com"
+        href : entityUrl
       },
     ],
   },
   {
     title : "What is our plan for the future? ",
     listItems : [
-      {text : "No crystal ball needed", href : "https://tincre.com"},
+      {text : "No crystal ball needed", href : entityUrl},
       {
         text : "We got a solid plan to put your money to work",
-        href : "https://tincre.com"
+        href : entityUrl
       },
-      {
-        text : "Our people will execute with lazer focus",
-        href : "https://tincre.com"
-      },
-      {text : "To grow the company", href : "https://tincre.com"},
+      {text : "Our people will execute with lazer focus", href : entityUrl},
+      {text : "To grow the company", href : entityUrl},
     ],
   },
   {
     title : "What do investors get?",
     listItems : [
-      {text : "A nice pat on the back", href : "https://tincre.com"},
-      {text : "Followed by five high fives", href : "https://tincre.com"},
-      {
-        text : "A quarterly report directly to their Kindle",
-        href : "https://tincre.com"
-      },
-      {text : "And a seat at the big kids table", href : "https://tincre.com"},
+      {text : "A nice pat on the back", href : entityUrl},
+      {text : "Followed by five high fives", href : entityUrl},
+      {text : "A quarterly report directly to their Kindle", href : entityUrl},
+      {text : "And a seat at the big kids table", href : entityUrl},
     ],
   },
   {
     title : "What's our exit strategy?",
     listItems : [
-      {text : "Build and go public", href : "https://tincre.com"},
-      {text : "Sell to the highest bidder", href : "https://tincre.com"},
-      {text : "Go big or go home", href : "https://tincre.com"},
-      {
-        text : "Quitting is not one of the answers",
-        href : "https://tincre.com"
-      },
+      {text : "Build and go public", href : entityUrl},
+      {text : "Sell to the highest bidder", href : entityUrl},
+      {text : "Go big or go home", href : entityUrl},
+      {text : "Quitting is not one of the answers", href : entityUrl},
     ],
   },
 ];
@@ -246,7 +215,7 @@ export const footerItems = [
     footerColumnItems : [
       {
         text : `About ${entityTitle}`,
-        href : "https://tincre.com/",
+        href : entityUrl,
       },
       {
         text : `Team`,
@@ -267,7 +236,7 @@ export const footerItems = [
     footerColumnItems : [
       {
         text : `About ${entityTitle}`,
-        href : "https://tincre.com/",
+        href : entityUrl,
       },
       {
         text : `Team`,
@@ -284,7 +253,7 @@ export const footerItems = [
     footerColumnItems : [
       {
         text : `About ${entityTitle}`,
-        href : "https://tincre.com/",
+        href : entityUrl,
       },
       {
         text : `Team`,
@@ -301,7 +270,7 @@ export const footerItems = [
     footerColumnItems : [
       {
         text : `About ${entityTitle}`,
-        href : "https://tincre.com/",
+        href : entityUrl,
       },
       {
         text : `Team`,

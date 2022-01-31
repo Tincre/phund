@@ -29,6 +29,7 @@ import {
   fAQCardContent,
   footerItems,
   socials,
+  hostname,
 } from "../cms.data";
 
 export default function Funded() {
@@ -41,7 +42,6 @@ export default function Funded() {
   const [message, setMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false);
   const { data: session, status } = useSession();
-  const hostname = "investor.tincre.com";
   const subscribe = async (e) => {
     e.preventDefault();
 
@@ -162,7 +162,7 @@ export default function Funded() {
             <FactSnippets
               title="Learn about the most awesome company on the floating rock we all call earth"
               subTitle="Growing Growth"
-              description="We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into Tincre."
+              description={`We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into ${entityTitle}.`}
               cta1="Invest now"
               cta1Href="#invest"
               cta2="Log in"
@@ -173,7 +173,7 @@ export default function Funded() {
             <InfoBlock
               title="Actually make some money on a new venture, for once."
               description="A short message that will bring potential investors into your company's world. And one that will allow them to become more familiar with your story."
-              cta="Invest in Tincre"
+              cta={`Invest in ${entityTitle}`}
               ctaHref="#invest"
             />
             <Team
