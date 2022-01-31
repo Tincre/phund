@@ -168,6 +168,7 @@ export default function Funded() {
               cta2="Log in"
               cta2Href="#login"
               factSnippetsCardContent={factSnippetsCardContent}
+              session={session}
             />
             <InfoBlock
               title="Actually make some money on a new venture, for once."
