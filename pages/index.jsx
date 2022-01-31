@@ -151,6 +151,7 @@ export default function Funded() {
           navigationLinks={navigationLinks}
           navigationHrefs={navigationHrefs}
           cta={cta}
+          session={session}
         />
         <Stats1 data={stats1Data} />
         <WhyInvest {...whyInvestContent} />
