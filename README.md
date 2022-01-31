@@ -14,10 +14,18 @@ yarn install
 yarn run dev
 ```
 
-:rocket: The dev site will be running locally at `localhost:3000`. :rocket:
+🚀 The dev site will be running locally at `localhost:3000` 🚀.
 ### Tests 
+
 Tests leverage `jest` and Kent Dodd's `react testing library`. These can 
 be found under the `__tests__` directory and run with `yarn run test`. 
+
+### Content updates 
+
+Make your content changes to the `cms.data.js` file in the root of this
+repository.
+
+> ℹ We are upgrading and standardizing the naming conventions so that they may be updated without examining the component codebase. ℹ
 
 ### Database Infrastructure
 
@@ -90,3 +98,5 @@ We can and will add more at a later date.
 ## Contributions 
 
 We :heart: community contributions.
+
+
