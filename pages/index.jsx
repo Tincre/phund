@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { fetcher, clientJwtDecode } from "../lib/utils";
+import { useSession, signIn, signOut } from "next-auth/react";
 import localforage from "localforage";
 import useSwr, { mutate } from "swr";
 import Footer from "../components/Footer";
@@ -39,6 +40,7 @@ export default function Funded() {
   const [inputError, setInputError] = useState(false);
   const [message, setMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const { data: session, status } = useSession();
   const hostname = "investor.tincre.com";
   const subscribe = async (e) => {
     e.preventDefault();
@@ -152,37 +154,41 @@ export default function Funded() {
         />
         <Stats1 data={stats1Data} />
         <WhyInvest {...whyInvestContent} />
-        <FactCards factCardsContent={factCardsContent} />
-        <Stats1 data={stats1Data} />
-        <FactSnippets
-          title="Learn about the most awesome company on the floating rock we all call earth"
-          subTitle="Growing Growth"
-          description="We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into Tincre."
-          cta1="Invest now"
-          cta1Href="#invest"
-          cta2="Log in"
-          cta2Href="#login"
-          factSnippetsCardContent={factSnippetsCardContent}
-        />
-        <InfoBlock
-          title="Actually make some money on a new venture, for once."
-          description="A short message that will bring potential investors into your company's world. And one that will allow them to become more familiar with your story."
-          cta="Invest in Tincre"
-          ctaHref="#invest"
-        />
-        <Team
-          title="Superior people build superior businesses"
-          subTitle="Better People"
-          description="Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class."
-          teamCardContent={teamCardContent}
-        />
-        <FAQ fAQCardContent={fAQCardContent} />
-        <InfoBlock
-          title="One investment to rule them all."
-          description="Don't miss this opportunity to clean up your horrific past performance and log a win in your P&L. Plus, all your friends will just love doing the same. A win win, by any measure."
-          cta={`Do one good thing before you croak: invest in ${entityTitle}`}
-          ctaHref="#invest"
-        />
+        {!session ? null : (
+          <>
+            <FactCards factCardsContent={factCardsContent} />
+            <Stats1 data={stats1Data} />
+            <FactSnippets
+              title="Learn about the most awesome company on the floating rock we all call earth"
+              subTitle="Growing Growth"
+              description="We're so performant that diversification is just an added cost to you and your portfolio. Displace underperforming assets by writing them down, collecting your tax loss, and reinvesting those proceeds into Tincre."
+              cta1="Invest now"
+              cta1Href="#invest"
+              cta2="Log in"
+              cta2Href="#login"
+              factSnippetsCardContent={factSnippetsCardContent}
+            />
+            <InfoBlock
+              title="Actually make some money on a new venture, for once."
+              description="A short message that will bring potential investors into your company's world. And one that will allow them to become more familiar with your story."
+              cta="Invest in Tincre"
+              ctaHref="#invest"
+            />
+            <Team
+              title="Superior people build superior businesses"
+              subTitle="Better People"
+              description="Your investments in half-drunk HYP school morons haven't worked out consistently. So change the pace and stop wasting your resources. Invest in the actual top of the class."
+              teamCardContent={teamCardContent}
+            />
+            <FAQ fAQCardContent={fAQCardContent} />
+            <InfoBlock
+              title="One investment to rule them all."
+              description="Don't miss this opportunity to clean up your horrific past performance and log a win in your P&L. Plus, all your friends will just love doing the same. A win win, by any measure."
+              cta={`Do one good thing before you croak: invest in ${entityTitle}`}
+              ctaHref="#invest"
+            />
+          </>
+        )}
         <Footer
           entityTitle={entityTitle}
           logoSrc={logoSrc}
