@@ -7,6 +7,7 @@ export default function NavigationHero({
   navigationLinks,
   navigationHrefs,
   cta,
+  session,
 }) {
   return (
     <section id="navigation-hero">
@@ -16,6 +17,7 @@ export default function NavigationHero({
           navigationLinks={navigationLinks}
           navigationHrefs={navigationHrefs}
           cta={cta}
+          session={session}
         />
         <Hero
           heading="We're a different kind of online business."
@@ -23,6 +25,7 @@ export default function NavigationHero({
           cta1="Learn about our raise"
           cta2="Sign in or up"
           imageSrc="https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg"
+          session={session}
         />
       </div>
       <MobileNavbar
@@ -30,6 +33,7 @@ export default function NavigationHero({
         navigationLinks={navigationLinks}
         navigationHrefs={navigationHrefs}
         cta={cta}
+        session={session}
       />
     </section>
   );

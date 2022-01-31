@@ -4,6 +4,7 @@ export default function MobileNavbar({
   navigationLinks,
   navigationHrefs,
   cta,
+  session,
 }) {
   return (
     <div className="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
