@@ -1,3 +1,7 @@
+import { useState, useRef, useEffect } from "react";
+import { fetcher, clientJwtDecode } from "../lib/utils";
+import localforage from "localforage";
+import useSwr, { mutate } from "swr";
 import Footer from "../components/Footer";
 import NavigationHero from "../components/Sections/NavigationHero";
 import WhyInvest from "../components/Sections/WhyInvest";
@@ -9,6 +13,106 @@ import Team from "../components/Sections/Team";
 import FAQ from "../components/Sections/FAQ";
 
 export default function Funded() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [state, setState] = useState(null);
+  const [decoded, setDecoded] = useState(null);
+
+  const inputEl = useRef(null);
+  const [inputError, setInputError] = useState(false);
+  const [message, setMessage] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const hostname = "investor.tincre.com";
+  const subscribe = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch(`/api/convertkit`, {
+      body: JSON.stringify({
+        email: inputEl.current.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      setInputError(true);
+      setMessage(
+        "Your e-mail address is invalid or you are already subscribed!"
+      );
+      return;
+    }
+
+    inputEl.current.value = "";
+    setInputError(false);
+    setSubscribed(true);
+    setMessage("Successfully! 🎉 You are now subscribed.");
+  };
+
+  const { data, error } = useSwr(
+    "/api/session",
+    { data: { sessionId: state?.sessionId } },
+    fetcher
+  );
+  useEffect(() => {
+    if (typeof state?.sessionId !== "undefined") {
+      mutate("/api/session", { sessionId: state?.sessionId }, true);
+    }
+  }, [state]);
+
+  // Create a new session
+  useEffect(() => {
+    // lookup local storage first
+    localforage.getItem(hostname).then((stateObj) => {
+      if (!stateObj) {
+        // create initial state in db using session identifier
+        fetch("/api/session", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const token = data?.token;
+            if (typeof token !== "undefined") {
+              const decoded = clientJwtDecode(token);
+              setDecoded(decoded);
+              setState({ hostname: decoded });
+            }
+          })
+          .catch((error) => console.error(error.message));
+      } else {
+        setState(stateObj);
+      }
+    });
+  }, []);
+  // Update outer state data
+  useEffect(() => {
+    if (decoded) {
+      setState(decoded);
+    }
+  }, [decoded]);
+  // Set local state on state object changes
+  useEffect(() => {
+    if (state) {
+      localforage
+        .setItem(hostname, state)
+        .then(() => {})
+        .catch((error) => console.error(error.message));
+    }
+  }, [state]);
+  // Update the local state for decoded tokens on change of data from swr
+  useEffect(() => {
+    if (typeof data !== "undefined") {
+      const token = data?.token;
+      if (typeof token !== "undefined") {
+        setDecoded(clientJwtDecode(token));
+      }
+    }
+  }, [data, error]);
+
   const entityTitle = "Tincre";
   const title = `Funded, by ${entityTitle}`;
   const description =
