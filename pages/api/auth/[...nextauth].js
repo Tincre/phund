@@ -10,9 +10,10 @@ export default NextAuth({
   secret : process.env.NEXTAUTH_SECRET,
   providers : [
     EmailProvider({
-      server : process.env.MAILSERVER,
-      from : 'investor.tincre.com <no-reply@investor.tincre.com>',
+      server : process.env.EMAIL_SERVER,
+      from : process.env.FROM_EMAIL || 'investors@tincre.com',
       maxAge : 600, // in seconds
     }),
   ],
+  debug : false,
 })
