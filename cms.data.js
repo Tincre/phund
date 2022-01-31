@@ -150,36 +150,69 @@ export const fAQCardContent = [
     title : "How much are we raising?",
     listItems : [
       {text : "We are looking to raise a lot", href : "https://tincre.com"},
-      {text : "And made it easy for you to give us money", href : "https://tincre.com"},
-      {text : "The terms are straightforward, href : "https://tincre.com"},
-      {text : "And there's a special kicker for you", href : "https://tincre.com"},
+      {
+        text : "And made it easy for you to give us money",
+        href : "https://tincre.com"
+      },
+      {text : "The terms are straightforward", href : "https://tincre.com"},
+      {
+        text : "And there's a special kicker for you",
+        href : "https://tincre.com"
+      },
     ],
   },
   {
     title : "How will we use the funds?",
     listItems : [
       {text : "Our office needs vending machines", href : "https://tincre.com"},
-      {text : "To make all of our new employees happy", href : "https://tincre.com"},
-      {text : "There also needs to be a slush fund", href : "https://tincre.com"},
-      {text : "To market and sell out our office parties", href : "https://tincre.com"},
+      {
+        text : "To make all of our new employees happy",
+        href : "https://tincre.com"
+      },
+      {
+        text : "There also needs to be a slush fund",
+        href : "https://tincre.com"
+      },
+      {
+        text : "To market and sell out our office parties",
+        href : "https://tincre.com"
+      },
     ],
   },
   {
     title : "Why are we the right team?",
     listItems : [
-      {text : "Lucy went to university and studied hard", href : "https://tincre.com"},
-      {text : "Johnny built a business and sold it fast", href : "https://tincre.com"},
-      {text : "Lauren learned how to code and build an app, href : "https://tincre.com"},
-      {text : "Thomas has people skills and interned at Initech", href : "https://tincre.com"},
+      {
+        text : "Lucy went to university and studied hard",
+        href : "https://tincre.com"
+      },
+      {
+        text : "Johnny built a business and sold it fast",
+        href : "https://tincre.com"
+      },
+      {
+        text : "Lauren learned how to code and build an app",
+        href : "https://tincre.com"
+      },
+      {
+        text : "Thomas has people skills and interned at Initech",
+        href : "https://tincre.com"
+      },
     ],
   },
   {
     title : "What is our plan for the future? ",
     listItems : [
       {text : "No crystal ball needed", href : "https://tincre.com"},
-      {text : "We got a solid plan to put your money to work, href : "https://tincre.com"},
-      {text : "Our people will execute with lazer focus , href : "https://tincre.com"},
-      {text : "To grow the company, href : "https://tincre.com"},
+      {
+        text : "We got a solid plan to put your money to work",
+        href : "https://tincre.com"
+      },
+      {
+        text : "Our people will execute with lazer focus",
+        href : "https://tincre.com"
+      },
+      {text : "To grow the company", href : "https://tincre.com"},
     ],
   },
   {
@@ -187,7 +220,10 @@ export const fAQCardContent = [
     listItems : [
       {text : "A nice pat on the back", href : "https://tincre.com"},
       {text : "Followed by five high fives", href : "https://tincre.com"},
-      {text : "A quarterly report directly to their Kindle, href : "https://tincre.com"},
+      {
+        text : "A quarterly report directly to their Kindle",
+        href : "https://tincre.com"
+      },
       {text : "And a seat at the big kids table", href : "https://tincre.com"},
     ],
   },
@@ -195,9 +231,12 @@ export const fAQCardContent = [
     title : "What's our exit strategy?",
     listItems : [
       {text : "Build and go public", href : "https://tincre.com"},
-      {text : "Sell to the highest bidder, href : "https://tincre.com"},
+      {text : "Sell to the highest bidder", href : "https://tincre.com"},
       {text : "Go big or go home", href : "https://tincre.com"},
-      {text : "Quitting is not one of the answers", href : "https://tincre.com"},
+      {
+        text : "Quitting is not one of the answers",
+        href : "https://tincre.com"
+      },
     ],
   },
 ];
