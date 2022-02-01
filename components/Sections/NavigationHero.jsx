@@ -30,7 +30,7 @@ export default function NavigationHero({
           subHeading="We create value across the web via financially performant semi-autonomous brands centered around core technology."
           cta1="Learn about our raise"
           cta2="Sign in or up"
-          imageSrc="https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg"
+          imageSrc={logoSrc}
           session={session}
         />
       </div>
