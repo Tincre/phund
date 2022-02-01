@@ -1,17 +1,15 @@
-export const hostname = "investor.tincre.com";
+export const hostname = "funded.vercel.app";
 export const entityTitle = "Funded";
-export const entityUrl = "https://funded.vercel.app"
+export const entityUrl = `https://${hostname}`;
 export const title = `${entityTitle} @ ${entityUrl}`;
 export const description =
     "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre. Raise capital the hard way.ᵀᴹ";
 export const author = `${entityTitle}, ${entityUrl}`;
 export const navigationLinks =
     [ `Investing in ${entityTitle}`, "About", "The Team" ];
-export const navigationHrefs =
-    [ "#why-invest-part-1", "#fact-snippets", "#team" ];
+export const navigationHrefs = [ "#why-invest", "#why-invest", "#why-invest" ];
 export const cta = "Invest";
-export const logoSrc =
-    "https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg";
+export const logoSrc = undefined;
 export const stats1Data = [
   {
     icon : "",
