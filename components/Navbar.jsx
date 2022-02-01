@@ -9,16 +9,27 @@ export default function Navbar({
   logoSrc,
   session,
 }) {
+  const [first, last] = [entityTitle?.slice(0, 1), entityTitle?.slice(1)];
+
   return (
     <nav className="flex justify-between items-center py-8">
       <a className="text-gray-700 text-2xl leading-none" href="#">
-        <img
-          className="h-16"
-          src={logoSrc}
-          alt={`The ${entityTitle} logo`}
-          width="auto"
-          height="4rem"
-        />
+        {!!logoSrc ? (
+          <img
+            className="h-16"
+            src={logoSrc}
+            alt={`The ${entityTitle} logo`}
+            width="auto"
+            height="4rem"
+          />
+        ) : (
+          <div className="inline">
+            <h1 className="font-extrabold tracking-wide text-indigo-700 text-5xl">
+              {first}
+              <span className="font-bold text-3xl">{last}</span>
+            </h1>
+          </div>
+        )}
       </a>
       <div className="lg:hidden">
         <button className="block navbar-burger text-indigo-500 hover:text-indigo-500 focus:outline-none">
