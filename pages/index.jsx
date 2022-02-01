@@ -38,40 +38,8 @@ export default function Funded() {
   const [state, setState] = useState(null);
   const [decoded, setDecoded] = useState(null);
 
-  const inputEl = useRef(null);
-  const [inputError, setInputError] = useState(false);
-  const [message, setMessage] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
   const { data: session, status } = useSession();
   const hostname = "investor.tincre.com";
-  const subscribe = async (e) => {
-    e.preventDefault();
-
-    const res = await fetch(`/api/convertkit`, {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-
-    const { error } = await res.json();
-    if (error) {
-      setInputError(true);
-      setMessage(
-        "Your e-mail address is invalid or you are already subscribed!"
-      );
-      return;
-    }
-
-    inputEl.current.value = "";
-    setInputError(false);
-    setSubscribed(true);
-    setMessage("Successfully! 🎉 You are now subscribed.");
-  };
-
   const { data, error } = useSwr(
     "/api/session",
     { data: { sessionId: state?.sessionId } },
