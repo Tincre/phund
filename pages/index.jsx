@@ -39,7 +39,7 @@ import {
 } from "../cms.data";
 
 export default function Funded() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuIsClicked, setMobileMenuIsClicked] = useState(true);
   const [state, setState] = useState(null);
   const [decoded, setDecoded] = useState(null);
 
@@ -159,6 +159,8 @@ export default function Funded() {
           cta={cta}
           logoSrc={logoSrc}
           session={session}
+          mobileMenuIsClicked={mobileMenuIsClicked}
+          setMobileMenuIsClicked={setMobileMenuIsClicked}
         />
         <Stats1 data={stats1Data} />
         <WhyInvest {...whyInvestContent} />

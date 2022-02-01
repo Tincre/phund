@@ -9,6 +9,8 @@ export default function NavigationHero({
   cta,
   logoSrc,
   session,
+  mobileMenuIsClicked,
+  setMobileMenuIsClicked,
 }) {
   return (
     <section id="navigation-hero">
@@ -20,6 +22,8 @@ export default function NavigationHero({
           cta={cta}
           logoSrc={logoSrc}
           session={session}
+          mobileMenuIsClicked={mobileMenuIsClicked}
+          setMobileMenuIsClicked={setMobileMenuIsClicked}
         />
         <Hero
           heading="We're a different kind of online business."
@@ -36,6 +40,8 @@ export default function NavigationHero({
         navigationHrefs={navigationHrefs}
         cta={cta}
         session={session}
+        mobileMenuIsClicked={mobileMenuIsClicked}
+        setMobileMenuIsClicked={setMobileMenuIsClicked}
       />
     </section>
   );

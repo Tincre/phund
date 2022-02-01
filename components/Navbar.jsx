@@ -8,6 +8,8 @@ export default function Navbar({
   cta,
   logoSrc,
   session,
+  mobileMenuIsClicked,
+  setMobileMenuIsClicked,
 }) {
   const [first, last] = [entityTitle?.slice(0, 1), entityTitle?.slice(1)];
 
@@ -32,9 +34,12 @@ export default function Navbar({
         )}
       </a>
       <div className="lg:hidden">
-        <button className="block navbar-burger text-indigo-500 hover:text-indigo-500 focus:outline-none">
+        <button
+          className="block navbar-burger text-indigo-600 hover:text-indigo-800 focus:outline-none"
+          onClick={() => setMobileMenuIsClicked(!mobileMenuIsClicked)}
+        >
           <svg
-            className="h-4 w-4"
+            className="h-8 w-8"
             fill="currentColor "
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
