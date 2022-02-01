@@ -37,7 +37,7 @@ export const whyInvestContent = {
   title : "We're seeking investment to release more kick ass brands",
   description :
       "Our formula for success works and we are scaling it by releasing stuff that customers love.",
-  cta : "Learn about how to invest",
+  cta : `Learn about investing in ${entityTitle}`,
   whyInvestCardData : [
     "The most epic management team in the world.",
     "With a proven track record of scaling productsand teams.",
