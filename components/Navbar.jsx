@@ -1,4 +1,5 @@
 import NavigationItem from "./NavigationItem";
+import Logo from "./Logo";
 import { signIn, signOut } from "next-auth/react";
 
 export default function Navbar({
@@ -11,27 +12,10 @@ export default function Navbar({
   mobileMenuIsClicked,
   setMobileMenuIsClicked,
 }) {
-  const [first, last] = [entityTitle?.slice(0, 1), entityTitle?.slice(1)];
-
   return (
     <nav className="flex justify-between items-center py-8">
       <a className="text-gray-700 text-2xl leading-none" href="#">
-        {!!logoSrc ? (
-          <img
-            className="h-16"
-            src={logoSrc}
-            alt={`The ${entityTitle} logo`}
-            width="auto"
-            height="4rem"
-          />
-        ) : (
-          <div className="inline">
-            <h1 className="font-extrabold tracking-wide text-indigo-700 text-5xl">
-              {first}
-              <span className="font-bold text-3xl">{last}</span>
-            </h1>
-          </div>
-        )}
+        <Logo logoSrc={logoSrc} entityTitle={entityTitle} />
       </a>
       <div className="lg:hidden">
         <button

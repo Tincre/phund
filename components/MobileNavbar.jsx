@@ -1,6 +1,7 @@
 import MobileNavigationItem from "./MobileNavigationItem";
 import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function MobileNavbar({
   entityTitle,
@@ -31,21 +32,7 @@ export default function MobileNavbar({
                   onClick={() => setMobileMenuIsClicked(!mobileMenuIsClicked)}
                 >
                   {" "}
-                  {logoSrc ? (
-                    <img
-                      className="h-16"
-                      src={logoSrc}
-                      alt={`The ${entityTitle} logo`}
-                      width="auto"
-                      height="4rem"
-                    />
-                  ) : (
-                    <div className="inline">
-                      <h1 className="first-letter:font-extrabold first-letter:text-5xl font-bold tracking-wide text-indigo-700 text-3xl">
-                        {entityTitle}
-                      </h1>
-                    </div>
-                  )}
+                  <Logo logoSrc={logoSrc} entityTitle={entityTitle} />
                 </a>
               </Link>
               <button
@@ -128,9 +115,7 @@ export default function MobileNavbar({
             </div>
           </nav>
         </>
-      ) : (
-        <div className="transition duration-200" />
-      )}
+      ) : null}
     </div>
   );
 }

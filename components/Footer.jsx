@@ -1,5 +1,6 @@
 import FooterColumn from "./FooterColumn";
 import Image from "next/image";
+import Logo from "./Logo";
 import { useState, useRef } from "react";
 
 export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
@@ -98,13 +99,7 @@ export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
         <div className="flex flex-wrap items-center">
           <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
             <a className="text-gray-600 text-2xl leading-none" href="#">
-              <img
-                className="h-16"
-                src={logoSrc}
-                alt={`${entityTitle} logo`}
-                width="auto"
-                height="4rem"
-              />
+              <Logo logoSrc={logoSrc} entityTitle={entityTitle} />
             </a>
             <p className="hidden lg:block mt-3 text-sm text-gray-500">
               {`All rights reserved. © ${entityTitle} 2022`}
