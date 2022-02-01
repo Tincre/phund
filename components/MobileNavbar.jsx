@@ -13,7 +13,7 @@ export default function MobileNavbar({
 }) {
   return (
     <div
-      className={`lg:hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm ${
+      className={`transition duration-200 lg:hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm ${
         !mobileMenuIsClicked ? "z-50" : "-z-50"
       }`}
     >
@@ -117,7 +117,9 @@ export default function MobileNavbar({
             </div>
           </nav>
         </>
-      ) : null}
+      ) : (
+        <div className="transition duration-200" />
+      )}
     </div>
   );
 }
