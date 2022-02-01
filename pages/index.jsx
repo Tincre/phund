@@ -5,6 +5,7 @@ import { routeSeoContent } from "../siteMetadata.js";
 import localforage from "localforage";
 import { NextSeo } from "next-seo";
 import useSwr, { mutate } from "swr";
+import Head from "next/head";
 import Footer from "../components/Footer";
 import NavigationHero from "../components/Sections/NavigationHero";
 import WhyInvest from "../components/Sections/WhyInvest";
@@ -109,23 +110,54 @@ export default function Funded() {
 
   return (
     <div>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      <NextSeo {...routeSeoContent["/"]} />
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
-      <meta name="author" content={author} />
-
+      <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <NextSeo {...routeSeoContent["/"]} />
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="author" content={author} />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/icons/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/icons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/icons/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/icons/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/icons/safari-pinned-tab.svg"
+          color="#5bbad5"
+        />
+        <link rel="shortcut icon" href="/icons/favicon.ico" />
+        <meta name="apple-mobile-web-app-title" content="Funded" />
+        <meta name="application-name" content="Funded" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-config" content="/icons/browserconfig.xml" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
       <div>
         <NavigationHero
           entityTitle={entityTitle}
           navigationLinks={navigationLinks}
           navigationHrefs={navigationHrefs}
           cta={cta}
+          logoSrc={logoSrc}
           session={session}
         />
         <Stats1 data={stats1Data} />
