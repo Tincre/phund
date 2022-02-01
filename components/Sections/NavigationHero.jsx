@@ -7,6 +7,7 @@ export default function NavigationHero({
   navigationLinks,
   navigationHrefs,
   cta,
+  logoSrc,
   session,
 }) {
   return (
@@ -17,6 +18,7 @@ export default function NavigationHero({
           navigationLinks={navigationLinks}
           navigationHrefs={navigationHrefs}
           cta={cta}
+          logoSrc={logoSrc}
           session={session}
         />
         <Hero

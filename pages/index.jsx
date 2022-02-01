@@ -153,6 +153,7 @@ export default function Funded() {
           navigationLinks={navigationLinks}
           navigationHrefs={navigationHrefs}
           cta={cta}
+          logoSrc={logoSrc}
           session={session}
         />
         <Stats1 data={stats1Data} />

@@ -6,6 +6,7 @@ export default function Navbar({
   navigationLinks,
   navigationHrefs,
   cta,
+  logoSrc,
   session,
 }) {
   return (
@@ -13,7 +14,7 @@ export default function Navbar({
       <a className="text-gray-700 text-2xl leading-none" href="#">
         <img
           className="h-16"
-          src="https://res.cloudinary.com/tincre/image/upload/v1638892843/tincre.com/tincre-brand-indigo-800_uatfej.svg"
+          src={logoSrc}
           alt={`The ${entityTitle} logo`}
           width="auto"
           height="4rem"
