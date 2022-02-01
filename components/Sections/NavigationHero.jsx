@@ -34,15 +34,17 @@ export default function NavigationHero({
           session={session}
         />
       </div>
-      <MobileNavbar
-        entityTitle={entityTitle}
-        navigationLinks={navigationLinks}
-        navigationHrefs={navigationHrefs}
-        cta={cta}
-        session={session}
-        mobileMenuIsClicked={mobileMenuIsClicked}
-        setMobileMenuIsClicked={setMobileMenuIsClicked}
-      />
+      <div className="transition ease-in-out duration-150">
+        <MobileNavbar
+          entityTitle={entityTitle}
+          navigationLinks={navigationLinks}
+          navigationHrefs={navigationHrefs}
+          cta={cta}
+          session={session}
+          mobileMenuIsClicked={mobileMenuIsClicked}
+          setMobileMenuIsClicked={setMobileMenuIsClicked}
+        />
+      </div>
     </section>
   );
 }
