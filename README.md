@@ -29,6 +29,9 @@ NEXTAUTH_SECRET="<a-generated-passphrase>"
 EMAIL_SERVER="smtp://<your-email-smtp-info>"
 FROM_EMAIL="investors@tincre.com"
 NEXTAUTH_URL=http://localhost:3000
+CONVERTKIT_API_URL=https://api.convertkit.com/v3/
+CONVERTKIT_API_KEY=<your-api-key>
+CONVERTKIT_FORM_ID=<your-form-id>
 ```
 
 ### Tests 
@@ -39,9 +42,16 @@ be found under the `__tests__` directory and run with `yarn run test`.
 ### Content updates 
 
 Make your content changes to the `cms.data.js` file in the root of this
-repository.
+repository. In addition, you'll need to edit `siteMetadata.js` for proper SEO updating. 
 
 > ℹ We are upgrading and standardizing the naming conventions so that they may be updated without examining the component codebase. ℹ
+
+### Newsletter signup 
+
+The `Footer` component includes a signup for a newsletter through ConvertKit. 
+
+Feel free to replace or add to the functionality in `pages/api/convertkit.js`
+for additional providers (such as Buttowndown or Mailchip). 
 
 ### Database Infrastructure
 

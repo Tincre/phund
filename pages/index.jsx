@@ -1,7 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { fetcher, clientJwtDecode } from "../lib/utils";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { routeSeoContent } from "../siteMetadata.js";
 import localforage from "localforage";
+import { NextSeo } from "next-seo";
 import useSwr, { mutate } from "swr";
 import Footer from "../components/Footer";
 import NavigationHero from "../components/Sections/NavigationHero";
@@ -40,38 +42,7 @@ export default function Funded() {
   const [state, setState] = useState(null);
   const [decoded, setDecoded] = useState(null);
 
-  const inputEl = useRef(null);
-  const [inputError, setInputError] = useState(false);
-  const [message, setMessage] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
   const { data: session, status } = useSession();
-  const subscribe = async (e) => {
-    e.preventDefault();
-
-    const res = await fetch(`/api/convertkit`, {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-
-    const { error } = await res.json();
-    if (error) {
-      setInputError(true);
-      setMessage(
-        "Your e-mail address is invalid or you are already subscribed!"
-      );
-      return;
-    }
-
-    inputEl.current.value = "";
-    setInputError(false);
-    setSubscribed(true);
-    setMessage("Successfully! 🎉 You are now subscribed.");
-  };
 
   const { data, error } = useSwr(
     "/api/session",
@@ -144,6 +115,7 @@ export default function Funded() {
         name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no"
       />
+      <NextSeo {...routeSeoContent["/"]} />
       <meta name="title" content={title} />
       <meta name="description" content={description} />
       <meta name="author" content={author} />

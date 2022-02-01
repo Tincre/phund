@@ -1,7 +1,41 @@
 import FooterColumn from "./FooterColumn";
 import Image from "next/image";
+import { useState, useRef } from "react";
 
 export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
+  const inputEl = useRef(null);
+  const [inputError, setInputError] = useState(false);
+  const [message, setMessage] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch(`/api/convertkit`, {
+      body: JSON.stringify({
+        email: inputEl.current.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      setInputError(true);
+      setMessage(
+        "Your e-mail address is invalid or you are already subscribed!"
+      );
+      return;
+    }
+
+    inputEl.current.value = "";
+    setInputError(false);
+    setSubscribed(true);
+    setMessage("Successfully! 🎉 You are now subscribed.");
+  };
+
   return (
     <section id="footer" className="py-20">
       <div className="container px-4 mx-auto">
@@ -23,14 +57,39 @@ export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
               </a>
               .
             </p>
-            <input
-              className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border border-2 rounded"
-              type="email"
-              placeholder="Type your e-mail"
-            />
-            <button className="inline-block px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200">
-              Sign up
-            </button>
+            <form onSubmit={subscribe}>
+              <label htmlFor="email-input" className="sr-only">
+                Email address
+              </label>
+              <input
+                className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border border-2 rounded"
+                id="email-input"
+                name="email"
+                placeholder={
+                  subscribed ? "You're subscribed !  🎉" : "Enter your email"
+                }
+                ref={inputEl}
+                required
+                type="email"
+                disabled={subscribed}
+              />
+              <button
+                className={`inline-block px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 ${
+                  subscribed
+                    ? "cursor-default"
+                    : "hover:bg-indigo-700 dark:hover:bg-indigo-300"
+                } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:ring-offset-black`}
+                type="submit"
+                disabled={subscribed}
+              >
+                {subscribed ? "Thank you!" : "Sign up"}
+              </button>
+              {inputError && (
+                <div className="pt-2 text-sm text-red-500 w-72 sm:w-96 dark:text-red-400">
+                  {message}
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
