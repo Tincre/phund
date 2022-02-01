@@ -43,6 +43,7 @@ export default function NavigationHero({
           session={session}
           mobileMenuIsClicked={mobileMenuIsClicked}
           setMobileMenuIsClicked={setMobileMenuIsClicked}
+          logoSrc={logoSrc}
         />
       </div>
     </section>

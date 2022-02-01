@@ -8,6 +8,7 @@ export default function MobileNavbar({
   navigationHrefs,
   cta,
   session,
+  logoSrc,
   mobileMenuIsClicked,
   setMobileMenuIsClicked,
 }) {
@@ -29,12 +30,22 @@ export default function MobileNavbar({
                   className="mr-auto text-2xl font-semibold leading-none"
                   onClick={() => setMobileMenuIsClicked(!mobileMenuIsClicked)}
                 >
-                  <img
-                    className="h-8"
-                    src="/logos/plain-indigo.svg"
-                    alt={`${entityTitle} logo`}
-                    width="auto"
-                  />
+                  {" "}
+                  {logoSrc ? (
+                    <img
+                      className="h-16"
+                      src={logoSrc}
+                      alt={`The ${entityTitle} logo`}
+                      width="auto"
+                      height="4rem"
+                    />
+                  ) : (
+                    <div className="inline">
+                      <h1 className="first-letter:font-extrabold first-letter:text-5xl font-bold tracking-wide text-indigo-700 text-3xl">
+                        {entityTitle}
+                      </h1>
+                    </div>
+                  )}
                 </a>
               </Link>
               <button
