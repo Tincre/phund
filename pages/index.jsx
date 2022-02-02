@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { signIn } from "next-auth/react";
 import { fetcher, clientJwtDecode } from "../lib/utils";
 import { useSession } from "next-auth/react";
 import { routeSeoContent } from "../siteMetadata.js";
@@ -15,6 +16,7 @@ import FactSnippets from "../components/Sections/FactSnippets";
 import InfoBlock from "../components/Sections/InfoBlock";
 import Team from "../components/Sections/Team";
 import FAQ from "../components/Sections/FAQ";
+import SafeTerms from "../components/Sections/SafeTerms";
 import {
   entityTitle,
   title,
@@ -43,7 +45,6 @@ export default function Funded() {
   const [mobileMenuIsClicked, setMobileMenuIsClicked] = useState(true);
   const [state, setState] = useState(null);
   const [decoded, setDecoded] = useState(null);
-
   const { data: session, status } = useSession();
 
   const { data, error } = useSwr(
@@ -51,6 +52,7 @@ export default function Funded() {
     { data: { sessionId: state?.sessionId } },
     fetcher
   );
+
   useEffect(() => {
     if (typeof state?.sessionId !== "undefined") {
       mutate("/api/session", { sessionId: state?.sessionId }, true);
@@ -165,6 +167,23 @@ export default function Funded() {
         />
         <Stats data={stats1Data} />
         <WhyInvest {...whyInvestContent} />
+        {!session ? (
+          <button
+            className="block md:inline-block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+            onClick={() => signIn()}
+          >
+            Log in to see terms
+          </button>
+        ) : (
+          <SafeTerms
+            {...{
+              title: "Offering Details",
+              subTitle: "Y-Combinator SAFE",
+              description:
+                "We use the standard Y-Combinator SAFE note and offer all three versions for your convenience. The below are priced to our optimality but present to add choice for your investment and portfolio requirements.",
+            }}
+          />
+        )}
         {!session ? null : (
           <>
             <FactCards factCardsContent={factCardsContent} />
