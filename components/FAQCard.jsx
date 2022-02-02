@@ -1,8 +1,8 @@
 export default function FAQCard({ title, listItems }) {
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 mb-8 px-4">
+    <div className="w-full md:w-1/2 lg:w-1/3 mb-8 px-4 lg:px-2">
       <div>
-        <span className="mx-auto mb-6 flex items-center justify-center w-16 h-16 p-3 bg-indigo-700 rounded-full">
+        <span className="mx-auto mb-6 flex items-start justify-center w-16 h-16 p-3 bg-indigo-700 rounded-full">
           <svg
             className="text-gray-50"
             width={32}
