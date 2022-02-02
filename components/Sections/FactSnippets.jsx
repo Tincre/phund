@@ -23,7 +23,7 @@ export default function FactSnippets({
           cta1Href={cta1Href}
           cta2Href={cta2Href}
         />
-        <div className="flex flex-wrap items-center justify-around -m-4">
+        <div className="flex flex-wrap items-center justify-around -m-4 text-center">
           {factSnippetsCardContent?.map(
             ({ description, imageSrc, title, subTitle }, index) => {
               return (
@@ -36,9 +36,9 @@ export default function FactSnippets({
                       {description}
                     </p>
                     <img
-                      className="mb-2 h-12 w-12 object-cover rounded-full"
+                      className="mb-2 h-12 w-12 object-cover rounded-full mx-auto"
                       src={imageSrc}
-                      alt="Avatar image"
+                      alt={`${title} fact snippet heading object`}
                     />
                     <p className="text-2xl font-bold font-heading">{title}</p>
                     <p className="text-lg text-gray-400">{subTitle}</p>
