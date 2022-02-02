@@ -2,7 +2,7 @@ export default function FAQCard({ title, listItems }) {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 mb-8 px-4 lg:px-2">
       <div>
-        <span className="mx-auto mb-6 flex items-start justify-center w-16 h-16 p-3 bg-indigo-700 rounded-full">
+        <span className="mx-auto mb-6 flex items-center justify-center w-16 h-16 p-3 bg-indigo-700 rounded-full">
           <svg
             className="text-gray-50"
             width={32}
@@ -17,10 +17,10 @@ export default function FAQCard({ title, listItems }) {
             />
           </svg>
         </span>
-        <h3 className="mb-2 text-lg lg:text-2xl font-bold font-heading">
+        <h3 className="mx-auto text-center mb-2 text-lg lg:text-2xl font-bold font-heading">
           {title}
         </h3>
-        <ul className="list-inside list-disc leading-loose text-gray-600 pl-4">
+        <ul className="list-inside list-disc leading-loose text-gray-600 py-1">
           {listItems?.map(({ text, href }, index) => (
             <li className="text-indigo-500" key={`${index}-faq-card`}>
               <a
