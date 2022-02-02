@@ -1,6 +1,11 @@
 import { useState, useRef } from "react";
 
-export default function Newsletter({}) {
+export default function Newsletter({
+  newsletterTitle,
+  newsletterSubtitle,
+  newsletterName,
+  newsletterHref,
+}) {
   const inputEl = useRef(null);
   const [inputError, setInputError] = useState(false);
   const [message, setMessage] = useState("");
@@ -39,14 +44,16 @@ export default function Newsletter({}) {
       className="order-first lg:order-last mb-10 lg:mb-0 w-full lg:w-2/5 lg:text-right"
       id="newsletter-signup"
     >
-      <h3 className="mb-4 text-lg font-bold font-heading">Subscribe</h3>
+      <h3 className="mb-4 text-lg font-bold font-heading">
+        {newsletterTitle || "Subscribe"}
+      </h3>
       <p className="mb-5 text-gray-500">
-        Stay informed with our updates via our blog,{" "}
+        {newsletterSubtitle || "Stay informed with updates from our blog "}
         <a
           className="text-gray-700 hover:font-bold hover:underline hover:text-indigo-700"
-          href="https://slightlysharpe.com"
+          href={newsletterHref || "https://slightlysharpe.com"}
         >
-          Slighly Sharpe
+          {newsletterName || "Slighly Sharpe"}
         </a>
         .
       </p>
