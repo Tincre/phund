@@ -32,12 +32,12 @@ export default function Hero({
               Log in
             </button>
           ) : (
-            <button
+            <a
               className="w-full lg:w-1/2 block lg:inline-block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-              onClick={() => signOut()}
+              href="#why-invest"
             >
-              Log out
-            </button>
+              Invest
+            </a>
           )}
         </div>
       </div>
