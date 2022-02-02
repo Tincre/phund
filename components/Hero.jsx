@@ -9,7 +9,7 @@ export default function Hero({
   session,
 }) {
   return (
-    <div className="flex flex-wrap items-center -mx-4 mt-10 lg:my-10 pb-10 lg:pb-16">
+    <div className="flex flex-wrap items-center -mx-4 mt-10 lg:my-10">
       <div className="w-full md:w-1/2 px-4 mb-12 md:mb-0">
         <h2 className="max-w-sm mb-8 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
           {heading}
