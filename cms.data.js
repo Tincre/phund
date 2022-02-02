@@ -1,9 +1,9 @@
-export const hostname = "funded.vercel.app";
-export const entityTitle = "Funded";
+export const hostname = "phund.vercel.app";
+export const entityTitle = "Phund";
 export const entityUrl = `https://${hostname}`;
 export const title = `${entityTitle} @ ${entityUrl}`;
 export const description =
-    "A Single Page Application for getting funded, built on Next.js and Tailwindcss, by Tincre. Raise capital the hard way.ᵀᴹ";
+    "Your app to get funded, built on Next.js and Tailwindcss, by Tincre. Raise capital the hard way.ᵀᴹ Phund.";
 export const author = `${entityTitle}, ${entityUrl}`;
 export const navigationLinks =
     [ `Investing in ${entityTitle}`, "About", "The Team" ];

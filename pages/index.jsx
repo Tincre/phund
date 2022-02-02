@@ -146,8 +146,8 @@ export default function Funded() {
           color="#5bbad5"
         />
         <link rel="shortcut icon" href="/icons/favicon.ico" />
-        <meta name="apple-mobile-web-app-title" content="Funded" />
-        <meta name="application-name" content="Funded" />
+        <meta name="apple-mobile-web-app-title" content={entityTitle} />
+        <meta name="application-name" content={entityTitle} />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />
