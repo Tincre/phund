@@ -1,6 +1,6 @@
 export default function InfoBlock({ title, description, cta, ctaHref }) {
   return (
-    <section id="info-carousel" className="py-20 bg-indigo-500">
+    <section id="info-block" className="py-20 bg-indigo-500">
       <div className="container px-4 mx-auto">
         <div className="flex flex-wrap items-center">
           <div className="max-w-2xl mb-8 mx-auto text-center">
