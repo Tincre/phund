@@ -1,7 +1,7 @@
-export default function WhyInvest1Hero({ subTitle, title, description, cta }) {
+export default function WhyInvestHero({ subTitle, title, description, cta }) {
   return (
-    <div className="w-full lg:w-1/2 px-4">
-      <div className="max-w-lg lg:mx-auto mb-10 lg:mb-0">
+    <div className="w-full lg:w-1/2 px-4 text-center lg:text-left">
+      <div className="lg:mx-auto mb-10 lg:mb-0">
         <span className="text-xs font-semibold text-indigo-500 uppercase">
           {subTitle}
         </span>
