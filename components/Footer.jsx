@@ -63,7 +63,7 @@ export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
                 Email address
               </label>
               <input
-                className="w-full lg:w-2/3 mb-4 pl-4 py-3 mr-4 border border-2 rounded"
+                className="w-2/3 mb-4 pl-4 py-3 mr-4 border border-1 rounded border-indigo-200 hover:border-indigo-500 focus:border-indigo-800"
                 id="email-input"
                 name="email"
                 placeholder={
@@ -75,7 +75,7 @@ export default function Footer({ entityTitle, logoSrc, footerItems, socials }) {
                 disabled={subscribed}
               />
               <button
-                className={`inline-block px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 ${
+                className={`w-1/4 inline-block px-5 py-3 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200 ${
                   subscribed
                     ? "cursor-default"
                     : "hover:bg-indigo-700 dark:hover:bg-indigo-300"
