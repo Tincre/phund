@@ -83,7 +83,7 @@ export default function MobileNavbar({
             <div className="mt-auto">
               <div className="pt-6">
                 <a
-                  className="block px-5 py-3 text-sm text-center font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+                  className="block px-5 py-3 text-sm text-center font-semibold text-white bg-indigo-500 hover:bg-indigo-600 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
                   href="#"
                   onClick={() => setMobileMenuIsClicked(!mobileMenuIsClicked)}
                 >
