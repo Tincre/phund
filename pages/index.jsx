@@ -36,6 +36,7 @@ import {
   hostname,
   teamContent,
   factSnippetsContent,
+  newsletterContent,
 } from "../cms.data";
 
 export default function Funded() {
@@ -184,6 +185,7 @@ export default function Funded() {
           logoSrc={logoSrc}
           footerItems={footerItems}
           socials={socials}
+          {...newsletterContent}
         />
       </div>
     </div>
