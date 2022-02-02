@@ -10,7 +10,7 @@ export default function FactCards({ factCardsContent }) {
                   <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-full bg-indigo-500 text-indigo-50 font-bold font-heading">
                     {index + 1}
                   </span>
-                  <h3 className="mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
+                  <h3 className="mb-4 h-36 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
                     {title}
                   </h3>
                   <p className="text-lg text-gray-500 leading-loose">
