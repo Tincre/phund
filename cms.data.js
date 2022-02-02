@@ -10,6 +10,12 @@ export const navigationLinks =
 export const navigationHrefs = [ "#why-invest", "#why-invest", "#why-invest" ];
 export const cta = "Invest";
 export const logoSrc = undefined;
+export const newsletterContent = {
+  newsletterTitle : 'Subscribe',
+  newsletterSubtitle : 'Say informed with updates from our blog ',
+  newsletterHref : 'https://slightlysharpe.com',
+  newsletterName : 'Slightly Sharpe',
+};
 export const stats1Data = [
   {
     icon : "",
