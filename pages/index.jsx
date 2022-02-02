@@ -1,6 +1,6 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { fetcher, clientJwtDecode } from "../lib/utils";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { routeSeoContent } from "../siteMetadata.js";
 import localforage from "localforage";
 import { NextSeo } from "next-seo";
@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import NavigationHero from "../components/Sections/NavigationHero";
 import WhyInvest from "../components/Sections/WhyInvest";
 import FactCards from "../components/Sections/FactCards";
-import Stats1 from "../components/Sections/Stats1";
+import Stats from "../components/Sections/Stats";
 import FactSnippets from "../components/Sections/FactSnippets";
 import InfoBlock from "../components/Sections/InfoBlock";
 import Team from "../components/Sections/Team";
@@ -163,12 +163,12 @@ export default function Funded() {
           mobileMenuIsClicked={mobileMenuIsClicked}
           setMobileMenuIsClicked={setMobileMenuIsClicked}
         />
-        <Stats1 data={stats1Data} />
+        <Stats data={stats1Data} />
         <WhyInvest {...whyInvestContent} />
         {!session ? null : (
           <>
             <FactCards factCardsContent={factCardsContent} />
-            <Stats1 data={stats1Data} />
+            <Stats data={stats1Data} />
             <FactSnippets
               {...factSnippetsContent}
               factSnippetsCardContent={factSnippetsCardContent}
