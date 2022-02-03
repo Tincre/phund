@@ -1,6 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
 import sgMail from "@sendgrid/mail";
-console.log(process.env.EMAIL_API_KEY)
 sgMail.setApiKey(process.env.EMAIL_API_KEY);
 import fs from "fs";
 import {getSession} from "next-auth/react";
@@ -14,7 +13,9 @@ export default async (req, res) => {
       if (!session) {
         return res.status(403).json({error : "Not authorized"});
       }
-      const businessUserEmail = 'jason@tincre.com'
+      console.log(`Sendgrid: ${process.env.EMAIL_API_KEY}`)
+
+      const businessUserEmail = 'jason@musicfox.io'
       const notificationMessage = 'The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n';
 
       const safeType = process.env.SAFE_TYPE;
@@ -39,9 +40,9 @@ export default async (req, res) => {
           },
         ],
       };
+      console.log('Passed data/setup')
       await sgMail.send(msg);
       const notificationMsg = notificationMessage + `  - Investor email: ${session?.user?.email}`;
-      sgMail.setApiKey(process.env.EMAIL_API_KEY);
       const businessMsg = {
         to: businessUserEmail,
         from: process.env.FROM_EMAIL,
@@ -53,7 +54,7 @@ export default async (req, res) => {
       res.status(200).json({message: `Email has been sent and the business notified.`});
        
     } catch (error) {
-      console.error(error);
+      console.error(JSON.stringify(error));
       res.status(500).json({error : "Error sending email"});
     }
   }
