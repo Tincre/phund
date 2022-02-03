@@ -15,7 +15,7 @@ export default function SafeTerms({
   return (
     <section
       id="safe-terms"
-      className="bg-gradient-to-b from-white to-indigo-500"
+      className="bg-gradient-to-b from-white to-indigo-500 pt-4 lg:pt-8"
     >
       {isClicked ? (
         <>
