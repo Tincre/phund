@@ -28,6 +28,7 @@ import {
   cta,
   logoSrc,
   stats1Data,
+  safeTermsContent,
   whyInvestContent,
   factCardsContent,
   factSnippetsCardContent,
@@ -175,14 +176,7 @@ export default function Funded() {
             Log in to see terms
           </button>
         ) : (
-          <SafeTerms
-            {...{
-              title: "Offering Details",
-              subTitle: "Y-Combinator SAFE",
-              description:
-                "We use the standard Y-Combinator SAFE note and offer all three versions for your convenience. The below are priced to our optimality but present to add choice for your investment and portfolio requirements.",
-            }}
-          />
+          <SafeTerms {...safeTermsContent} />
         )}
         {!session ? null : (
           <>

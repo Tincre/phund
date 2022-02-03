@@ -325,4 +325,28 @@ export const infoBlockContent = {
   cta : `Do one good thing before you croak: invest in ${entityTitle}`,
   ctaHref : "#invest"
 
-}
+};
+export const safeTermsContent = {
+  title : "Offering Details",
+  subTitle : "Y-Combinator SAFE",
+  description :
+      "We use the standard Y-Combinator SAFE note and offer all three versions for your convenience. The below are priced to our optimality but present to add choice for your investment and portfolio requirements.",
+  safeNoteContent : [
+    {
+      safeTitle : "Cap",
+      href : "",
+      description : '"Standard", valuation cap only.',
+    },
+    {
+      safeTitle : "Discount",
+      href : "",
+      description :
+          "Discount applies at conversion during the Liquidity Event.",
+    },
+    {
+      safeTitle : "MFN",
+      href : "",
+      description : "No cap and no discount with MFN provision.",
+    },
+  ],
+};
