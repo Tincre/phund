@@ -11,7 +11,7 @@ export default function SafeTerms({
   cta,
 }) {
   const [isClicked, setIsClicked] = useState(true);
-
+  const [safeType, setSafeType] = useState(null);
   return (
     <section
       id="safe-terms"
@@ -35,7 +35,10 @@ export default function SafeTerms({
               <div className="group" key={`${index + 1}-safe-button`}>
                 <button
                   className="block w-2/5 md:w-3/5 lg:w-4/5 mx-auto px-5 py-3 mb-3 md:mb-0 text-sm bg-indigo-500 group-hover:bg-indigo-600 text-white font-semibold border border-indigo-500 group-hover:border-indigo-600 rounded transition duration-200"
-                  onClick={() => setIsClicked(!isClicked)}
+                  onClick={() => {
+                    setIsClicked(!isClicked);
+                    setSafeType(item?.safeTitle);
+                  }}
                 >
                   {" "}
                   {item?.safeTitle}
@@ -73,7 +76,7 @@ export default function SafeTerms({
         </>
       ) : (
         <Modal setIsClicked={setIsClicked}>
-          <SafeNote />
+          <SafeNote safeType={safeType} />
         </Modal>
       )}
     </section>
