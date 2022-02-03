@@ -4,7 +4,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --coverage"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
@@ -33,9 +33,7 @@
     "nodemailer": "^6.7.2",
     "postcss": "^8.4.5",
     "prisma": "^3.8.1",
-    "react-markdown": "^8.0.0",
-    "rehype-raw": "^6.1.1",
-    "remark-gfm": "^3.0.1",
+    "react-markdown": "^6.0.0",
     "swr": "^1.2.0",
     "tailwindcss": "^3.0.18",
     "typescript": "^4.5.5",
