@@ -3,6 +3,7 @@ export default function SafeTerms({
   subTitle,
   description,
   safeNoteContent,
+  cta,
 }) {
   return (
     <section id="safe-terms">
@@ -27,6 +28,30 @@ export default function SafeTerms({
             </p>
           </div>
         ))}
+      </div>
+      <div>
+        <div className="mt-8 lg:mt-12 text-center mx-auto text-gray-600">
+          {cta}
+        </div>
+        <a
+          href="#fact-cards"
+          className="block mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
+        >
+          <svg
+            className="animate-pulse mx-auto text-indigo-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </a>
       </div>
     </section>
   );
