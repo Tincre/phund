@@ -3,11 +3,8 @@ import sgMail from "@sendgrid/mail";
 import fs from "fs";
 import {getSession} from "next-auth/react";
 import path from "path";
-import {resolveSafeTypeToFilename, sendEmailNotification} from '../../lib/node-utils';
+import {resolveSafeTypeToFilename } from '../../lib/node-utils';
 
-sgMail.setApiKey(process.env.EMAIL_API_KEY);
-const businessUserEmail = 'jason@tincre.com'
-const notificationMessage = 'The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n';
 export default async (req, res) => {
   if (req.method === "POST") {
     try {
@@ -15,6 +12,10 @@ export default async (req, res) => {
       if (!session) {
         return res.status(403).json({error : "Not authorized"});
       }
+      sgMail.setApiKey(process.env.EMAIL_API_KEY);
+      const businessUserEmail = 'jason@tincre.com'
+      const notificationMessage = 'The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n';
+
       const safeType = process.env.SAFE_TYPE;
       const filename = resolveSafeTypeToFilename(safeType);
       const dirRelativeToPublicFolder = "safes";
