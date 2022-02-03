@@ -13,7 +13,10 @@ export default function SafeTerms({
   const [isClicked, setIsClicked] = useState(true);
 
   return (
-    <section id="safe-terms">
+    <section
+      id="safe-terms"
+      className="bg-gradient-to-b from-white to-indigo-500"
+    >
       {isClicked ? (
         <>
           <div className="px-4 max-w-3xl mx-auto mb-12 lg:mb-16 text-center">
@@ -23,7 +26,9 @@ export default function SafeTerms({
             <h2 className="mt-2 mb-4 text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight font-bold font-heading">
               {title}
             </h2>
-            <p className="text-lg text-gray-500 leading-loose">{description}</p>
+            <p className="text-lg text-slate-800 leading-loose">
+              {description}
+            </p>
           </div>
           <div className="max-w-3xl grid md:grid-cols-3 gap-2 mx-auto my-10">
             {safeNoteContent?.map((item, index) => (
@@ -35,14 +40,14 @@ export default function SafeTerms({
                   {" "}
                   {item?.safeTitle}
                 </button>
-                <p className="mx-auto text-center group-hover:font-bold mb-6 mt-1 md:mb-0 mt-4 text-xs italic w-2/5 md:w-3/5 lg:w-4/5">
+                <p className="mx-auto text-center text-white group-hover:font-semibold mb-6 mt-1 md:mb-0 mt-4 text-xs italic w-2/5 md:w-3/5 lg:w-4/5">
                   {item?.description}
                 </p>
               </div>
             ))}
           </div>
-          <div className="mb-8 lg:mb-12">
-            <div className="mt-8 lg:mt-12 text-center mx-auto text-gray-600">
+          <div className="pb-8 lg:pb-12">
+            <div className="mt-8 lg:mt-12 text-center text-white mx-auto text-gray-600">
               {cta}
             </div>
             <a
