@@ -38,14 +38,18 @@ export default async (req, res) => {
         ],
       };
       await sgMail.send(msg);
-      const notificatWasSent = await sendEmailNotification(businessUserEmail, notificationMessage + `  - Investor email: ${session?.user?.email}`);
-      if (notificatWasSent) {
-        res.status(200).json({message: `Email has been sent and the business notified.`});
+      const notificationMsg = notificationMessage + `  - Investor email: ${session?.user?.email}`;
+      sgMail.setApiKey(process.env.EMAIL_API_KEY);
+      const businessMsg = {
+        to: businessUserEmail,
+        from: process.env.FROM_EMAIL,
+        subject: `Notification from Phund`,
+        text: notificationMsg,
+      };
+      await sgMail.send(businessMsg);
+
+      res.status(200).json({message: `Email has been sent and the business notified.`});
        
-      }
-      else {
-        res.status(200).json({message: `Email has been sent`});
-      }
     } catch (error) {
       console.error(error);
       res.status(500).json({error : "Error sending email"});
