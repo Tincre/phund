@@ -645,6 +645,29 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.1.0.tgz#7f698254aadf921e48dda8c0a6b304026b8a9323"
   integrity sha512-JLo+Y592QzIE+q7Dl2pMUtt4q8SKYI5jDrZxrozEQxnGVOyYE+GWK9eLkwTaeN9DDctlaRAQ3TBmzZ1qdLE30A==
 
+"@sendgrid/client@^7.6.0":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/client/-/client-7.6.0.tgz#f90cb8759c96e1d90224f29ad98f8fdc2be287f3"
+  integrity sha512-cpBVZKLlMTO+vpE18krTixubYmZa98oTbLkqBDuTiA3zRkW+urrxg7pDR24TkI35Mid0Zru8jDHwnOiqrXu0TA==
+  dependencies:
+    "@sendgrid/helpers" "^7.6.0"
+    axios "^0.21.4"
+
+"@sendgrid/helpers@^7.6.0":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/helpers/-/helpers-7.6.0.tgz#b381bfab391bcd66c771811b22bb6bb2d5c1dfc6"
+  integrity sha512-0uWD+HSXLl4Z/X3cN+UMQC20RE7xwAACgppnfjDyvKG0KvJcUgDGz7HDdQkiMUdcVWfmyk6zKSg7XKfKzBjTwA==
+  dependencies:
+    deepmerge "^4.2.2"
+
+"@sendgrid/mail@^7.6.0":
+  version "7.6.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/mail/-/mail-7.6.0.tgz#e74ee30110527feab5d3b83d68af0cd94537f6d2"
+  integrity sha512-0KdaSZzflJD/vUAZjB3ALBIuaVGoLq22hrb2fvQXZHRepU/yhRNlEOqrr05MfKBnKskzq1blnD1J0fHxiwaolw==
+  dependencies:
+    "@sendgrid/client" "^7.6.0"
+    "@sendgrid/helpers" "^7.6.0"
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.3.tgz#3802ddd21a50a949b6721ddd72da36e67e7f1b2d"
@@ -1101,6 +1124,13 @@ axe-core@^4.3.5:
   version "4.3.5"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.3.5.tgz#78d6911ba317a8262bfee292aeafcc1e04b49cc5"
   integrity sha512-WKTW1+xAzhMS5dJsxWkliixlO/PqC4VhmO9T4juNYcaTg9jzWiJsou6m5pxWYGfigWbwzJWeFY6z47a+4neRXA==
+
+axios@^0.21.4:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
 
 axobject-query@^2.2.0:
   version "2.2.0"
@@ -2036,6 +2066,11 @@ flatted@^3.1.0:
   version "3.2.5"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.5.tgz#76c8584f4fc843db64702a6bd04ab7a8bd666da3"
   integrity sha512-WIWGi2L3DyTUvUrwRKgGi9TwxQMUEqPOPQBVi71R96jZXJdFskXEmf54BoZaS1kknGODoIGASGEzBUYdyMCBJg==
+
+follow-redirects@^1.14.0:
+  version "1.14.7"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
+  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
 
 form-data@^3.0.0:
   version "3.0.1"
