@@ -349,5 +349,5 @@ export const safeTermsContent = {
       description : "No cap and no discount with MFN provision.",
     },
   ],
-  cta : 'Learn more about our company',
+  cta : 'Learn more about our business.',
 };
