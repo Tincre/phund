@@ -1,5 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import sgMail from "@sendgrid/mail";
+console.log(process.env.EMAIL_API_KEY)
+sgMail.setApiKey(process.env.EMAIL_API_KEY);
 import fs from "fs";
 import {getSession} from "next-auth/react";
 import path from "path";
@@ -12,7 +14,6 @@ export default async (req, res) => {
       if (!session) {
         return res.status(403).json({error : "Not authorized"});
       }
-      sgMail.setApiKey(process.env.EMAIL_API_KEY);
       const businessUserEmail = 'jason@tincre.com'
       const notificationMessage = 'The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n';
 
