@@ -2,8 +2,28 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/outline";
 
-export default function Modal({ title, buttonText, setIsClicked, children }) {
+export default function Modal({
+  title,
+  buttonText,
+  setIsClicked,
+  safeType,
+  children,
+}) {
   const [open, setOpen] = useState(true);
+  const emailMe = async (e, safeType) => {
+    try {
+      e.preventDefault();
+      fetch("/api/email-me", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: safeType,
+      });
+    } catch (error) {
+      console.error(`Something went wrong during email attempt. ${error}`);
+    }
+  };
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -66,9 +86,10 @@ export default function Modal({ title, buttonText, setIsClicked, children }) {
                 <button
                   type="button"
                   className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
-                  onClick={() => {
+                  onClick={(e) => {
                     setOpen(false);
                     setIsClicked(true);
+                    emailMe(e, safeType);
                   }}
                 >
                   {buttonText || "Email me this SAFE note"}

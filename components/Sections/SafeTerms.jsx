@@ -75,7 +75,7 @@ export default function SafeTerms({
           </div>
         </>
       ) : (
-        <Modal setIsClicked={setIsClicked}>
+        <Modal setIsClicked={setIsClicked} safeType={safeType}>
           <SafeNote safeType={safeType} />
         </Modal>
       )}
