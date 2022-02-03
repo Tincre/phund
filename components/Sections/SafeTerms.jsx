@@ -29,13 +29,13 @@ export default function SafeTerms({
           </div>
         ))}
       </div>
-      <div>
+      <div className="mb-8 lg:mb-12">
         <div className="mt-8 lg:mt-12 text-center mx-auto text-gray-600">
           {cta}
         </div>
         <a
           href="#fact-cards"
-          className="block mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
+          className="block mx-auto mt-6 lg:mt-8 w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
         >
           <svg
             className="animate-pulse mx-auto text-indigo-500"
