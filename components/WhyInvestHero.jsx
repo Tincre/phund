@@ -11,12 +11,6 @@ export default function WhyInvestHero({ subTitle, title, description, cta }) {
         <p className="mb-8 text-base leading-relaxed lg:text-xl lg:leading-relaxed text-gray-500">
           {description}
         </p>
-        <a
-          className="inline-block px-5 py-3 md:mr-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-          href="#"
-        >
-          {cta}
-        </a>
       </div>
     </div>
   );
