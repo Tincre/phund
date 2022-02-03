@@ -1,3 +1,4 @@
+/* eslint-disable react/no-children-prop */
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import raw from "rehype-raw";
