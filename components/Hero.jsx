@@ -50,7 +50,7 @@ export default function Hero({
       </div>
       <a
         href="#why-invest"
-        className="block mt-8 lg:mt-12 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
+        className="animate-pulse block mt-8 lg:mt-12 mx-auto w-16 h-16 p-5 rounded-full bg-indigo-50 hover:bg-indigo-100"
       >
         <svg
           className="mx-auto text-indigo-500"
