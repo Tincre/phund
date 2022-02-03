@@ -5,6 +5,26 @@ A simple **S**ingle **P**age **A**pp for getting funded. Built on
 
 Development and support provided by [Tincre](https://tincre.com).
 
+## Features 
+
+- Add your SAFE note, a business email, and [SendGrid](https://sendgrid.com) API key, get on-demand 
+email delivery of your note for authenticated users plus a notification to your business email.
+
+- Simple content changes maximize efficient customization for your business and your capital raise.
+
+- [Tailwindcss](https://tailwindcss.com) styling to beautifully modify your css right next to your 
+logic. 
+
+- [Next.js](https://nextjs.org) to optimize your engineering on the web.
+
+- [next-auth](https://next-auth.js.org) for build-in security over your walled garden + SEC requirements for **not** marketing private placements (SAFE) to non-accredited investors. 
+
+- next-seo for easy and efficient Search Engine Optimization.
+
+- jest/React Testing Library to declaratively test components and page renders.
+
+- Sensible defaults!
+
 ## Development Setup
 
 Clone this repo. Then,
