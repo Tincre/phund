@@ -168,16 +168,8 @@ export default function Funded() {
         />
         <Stats data={stats1Data} />
         <WhyInvest {...whyInvestContent} />
-        {!session ? (
-          <button
-            className="block md:inline-block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-            onClick={() => signIn()}
-          >
-            Log in to see terms
-          </button>
-        ) : (
-          <SafeTerms {...safeTermsContent} />
-        )}
+
+        <SafeTerms {...safeTermsContent} session={session} />
         {!session ? null : (
           <>
             <FactCards factCardsContent={factCardsContent} />

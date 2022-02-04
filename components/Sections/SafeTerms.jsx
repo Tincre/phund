@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { signIn } from "next-auth/react";
 import Modal from "../Modal";
 import SafeNote from "../SafeNote";
 
@@ -9,9 +9,22 @@ export default function SafeTerms({
   description,
   safeNoteContent,
   cta,
+  session,
 }) {
   const [isClicked, setIsClicked] = useState(true);
   const [safeType, setSafeType] = useState(null);
+  if (!session) {
+    return (
+      <div className="mx-auto">
+        <button
+          className="mx-auto w-3/5 lg:w-2/5 block px-5 py-3 text-sm font-semibold text-indigo-500 hover:text-white hover:bg-indigo-500 border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+          onClick={() => signIn()}
+        >
+          Log in to see terms
+        </button>
+      </div>
+    );
+  }
   return (
     <section
       id="safe-terms"
