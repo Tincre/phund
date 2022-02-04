@@ -4,7 +4,7 @@ import fs from "fs";
 import { getSession } from "next-auth/react";
 import path from "path";
 import { resolveSafeTypeToFilename } from "../../lib/node-utils";
-import PhundConfig from "../../phund.config";
+import { businessUserEmail } from "../../phund.config";
 
 sgMail.setApiKey(process.env.EMAIL_API_KEY);
 function SplitFromEmailEnv(envVar) {
@@ -22,7 +22,6 @@ export default async (req, res) => {
         return res.status(403).json({ error: "Not authorized" });
       }
       const from = SplitFromEmailEnv(process.env.FROM_EMAIL);
-      const businessUserEmail = PhundConfig?.businessUserEmail;
       const notificationMessage =
         "The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n";
 
