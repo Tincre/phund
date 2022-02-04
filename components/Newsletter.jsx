@@ -50,7 +50,7 @@ export default function Newsletter({
       <p className="mb-5 text-gray-500">
         {newsletterSubtitle || "Stay informed with updates from our blog "}
         <a
-          className="text-gray-700 hover:font-bold hover:underline hover:text-indigo-700"
+          className="flex inline-flex text-gray-700 hover:font-bold hover:underline hover:text-indigo-700"
           href={newsletterHref || "https://slightlysharpe.com"}
         >
           {newsletterName || "Slighly Sharpe"}
