@@ -7,6 +7,7 @@ export default function WhyInvest({
   description,
   cta,
   whyInvestCardData,
+  session,
 }) {
   return (
     <section id="why-invest" className="py-20">
@@ -31,14 +32,16 @@ export default function WhyInvest({
               })}
             </div>
           </div>
-          <div className="text-center mx-auto">
-            <a
-              className="inline-block px-5 py-3 md:mr-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-              href="#safe-terms"
-            >
-              {cta}
-            </a>
-          </div>
+          {!session ? null : (
+            <div className="mt-12 text-center mx-auto">
+              <a
+                className="inline-block px-12 py-3 mb-3 md:mb-0 text-sm bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
+                href="#safe-terms"
+              >
+                {cta}
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </section>

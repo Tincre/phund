@@ -1,4 +1,4 @@
-export default function WhyInvestHero({ subTitle, title, description, cta }) {
+export default function WhyInvestHero({ subTitle, title, description }) {
   return (
     <div className="w-full lg:w-1/2 px-4 text-center lg:text-left">
       <div className="lg:mx-auto mb-10 lg:mb-0">
