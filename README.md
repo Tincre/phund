@@ -1,4 +1,4 @@
-# funded
+# [Phund](https://example.phund.xyz)
 
 A simple **S**ingle **P**age **A**pp for getting funded. Built on
 [Next.js](https://nextjs.org), styled with [Tailwindcss](https://tailwindcss.com), and deployed on [Vercel](https://vercel.com). 
