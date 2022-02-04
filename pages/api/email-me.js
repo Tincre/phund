@@ -5,7 +5,13 @@ import { getSession } from "next-auth/react";
 import path from "path";
 import { resolveSafeTypeToFilename } from "../../lib/node-utils";
 sgMail.setApiKey(process.env.EMAIL_API_KEY);
-
+function SplitFromEmailEnv(envVar) {
+  const first = envVar.indexOf("<");
+  const last = envVar.indexOf(">");
+  const email = envVar.substring(first + 1, last);
+  const name = envVar.substring(0, first).trim();
+  return { name: name, email: email };
+}
 export default async (req, res) => {
   if (req.method === "POST") {
     try {
@@ -13,8 +19,7 @@ export default async (req, res) => {
       if (!session) {
         return res.status(403).json({ error: "Not authorized" });
       }
-      console.log(`Sendgrid: ${process.env.EMAIL_API_KEY}`);
-
+      const from = SplitFromEmailEnv(process.env.FROM_EMAIL);
       const businessUserEmail = "jason@musicfox.io";
       const notificationMessage =
         "The following user emailed themselves our SAFE note. You should probably follow up tiger. ;-)\n\n";
@@ -30,7 +35,7 @@ export default async (req, res) => {
         "Hi!\n\nWe're thrilled that you're interested in investing to help us continue our growth. We will reach out shortly.\n\nMeanwhile, please find your requested SAFE note attached.";
       const msg = {
         to: session?.user?.email,
-        from: "support@phund.xyz",
+        from: from,
         subject: `Your requested SAFE note.`,
         text: message,
         attachments: [
@@ -42,14 +47,13 @@ export default async (req, res) => {
           },
         ],
       };
-      console.log("Passed data/setup");
       await sgMail.send(msg);
       const notificationMsg =
         notificationMessage + ` - Investor email: ${session?.user?.email}`;
       const businessMsg = {
         to: businessUserEmail,
-        from: "support@phund.xyz",
-        subject: `Notification from Phund`,
+        from: from,
+        subject: `Notification of user action`,
         text: notificationMsg,
       };
       await sgMail.send(businessMsg);
