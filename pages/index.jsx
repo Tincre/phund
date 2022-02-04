@@ -167,8 +167,7 @@ export default function Funded() {
           setMobileMenuIsClicked={setMobileMenuIsClicked}
         />
         <Stats data={stats1Data} />
-        <WhyInvest {...whyInvestContent} />
-
+        <WhyInvest {...whyInvestContent} session={session} />
         <SafeTerms {...safeTermsContent} session={session} />
         {!session ? null : (
           <>
