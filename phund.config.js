@@ -1,3 +1,1 @@
-export default PhundConfig = {
-  businessUserEmail: "phil@tincre.com",
-};
+export const businessUserEmail = "phil@tincre.com";
