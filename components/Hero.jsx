@@ -20,7 +20,7 @@ export default function Hero({
         <div>
           <a
             className="w-full lg:w-2/5 block lg:inline-block px-5 py-3 lg:mr-3 mb-3 lg:mb-0 text-sm text-center bg-indigo-500 hover:bg-indigo-600 text-white font-semibold border border-indigo-500 hover:border-indigo-600 rounded transition duration-200"
-            href="#"
+            href="#why-invest"
           >
             {cta1}
           </a>
