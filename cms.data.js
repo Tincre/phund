@@ -15,7 +15,7 @@ export const cta = "Invest";
 export const logoSrc = undefined;
 export const newsletterContent = {
   newsletterTitle: "Subscribe",
-  newsletterSubtitle: "Say informed with updates from our blog ",
+  newsletterSubtitle: "Stay informed with updates from our blog ",
   newsletterHref: "https://slightlysharpe.com",
   newsletterName: "Slightly Sharpe",
 };
