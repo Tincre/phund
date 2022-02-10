@@ -43,7 +43,7 @@ export default function SafeTerms({
               {description}
             </p>
           </div>
-          <div className="max-w-3xl grid md:grid-cols-3 gap-2 mx-auto my-10">
+          <div className="max-w-3xl grid md:grid-cols-1 gap-4 mx-auto my-10">
             {safeNoteContent?.map((item, index) => (
               <div className="group" key={`${index + 1}-safe-button`}>
                 <button
