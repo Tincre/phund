@@ -1,6 +1,6 @@
-<p align="center">
+<a href="https://example.phund.xyz" target="_blank" rel="noopener noreferrer"><p align="center">
   <img alt="Light" src="https://res.cloudinary.com/tincre/image/upload/v1645047723/phund.xyz/phund-app-example-2_nwr9ph_snubh9.jpg" width="87%">
-</p>
+</p></a>
 
 # [Phund](https://example.phund.xyz)
 
