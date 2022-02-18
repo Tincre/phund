@@ -1,4 +1,11 @@
 {
+  "version": "1.0.0",
+  "name": "phund",
+  "description": "Your app to get funded, built on Next.js and Tailwindcss, by Tincre. Raise capital the hard way.ᵀᴹ",
+  "homepage": "https://github.com/Tincre/phund#readme",
+  "bugs": {"url":"https://github.com/Tincre/phund/issues", "email": "developers@tincre.dev"},
+  "license": "MIT",
+  "author": "Jason R. Stevens, CFA on behalf of Tincre and contributors (http://tincre.com/)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
