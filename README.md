@@ -154,4 +154,4 @@ We can and will add more at a later date.
 
 ## Contributions
 
-We :heart: community contributions.
+We :heart: community contributions. Please see our [contributors guide + CLA](/CONTRIBUTING.md).
