@@ -6,8 +6,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
@@ -17,11 +17,13 @@ model UserSession {
   sessionId String   @unique
   email     String?
   data      Json?
+
   @@unique([email, sessionId])
 }
 
 model Account {
-  id                 String  @id @default(cuid())
+  id                 String   @id @default(cuid())
+  createdAt          DateTime @default(now()) @db.Timestamptz(6)
   userId             String
   type               String
   provider           String
@@ -43,6 +45,7 @@ model Account {
 
 model Session {
   id           String   @id @default(cuid())
+  createdAt    DateTime @default(now()) @db.Timestamptz(6)
   sessionToken String   @unique
   userId       String
   expires      DateTime
@@ -51,7 +54,7 @@ model Session {
 
 model User {
   id            String    @id @default(cuid())
-  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  createdAt     DateTime  @default(now()) @db.Timestamptz(6)
   name          String?
   email         String?   @unique
   emailVerified DateTime?
