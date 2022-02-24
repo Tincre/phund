@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/outline";
-
+import { emailMe } from "../lib/utils";
 export default function Modal({
   title,
   buttonText,
@@ -10,20 +10,6 @@ export default function Modal({
   children,
 }) {
   const [open, setOpen] = useState(true);
-  const emailMe = async (e, safeType) => {
-    try {
-      e.preventDefault();
-      fetch("/api/email-me", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: safeType,
-      });
-    } catch (error) {
-      console.error(`Something went wrong during email attempt. ${error}`);
-    }
-  };
 
   return (
     <Transition.Root show={open} as={Fragment}>
