@@ -1,4 +1,15 @@
-import {classNames, clientJwtDecode, fetcher} from '../lib/utils';
+import {classNames, clientJwtDecode, fetcher, resolveSafeTypeToComponent} from '../lib/utils';
+import {render} from '@testing-library/react'
+
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
+  })
+);
+
+beforeEach(() => {
+  fetch.mockClear();
+});
 
 describe('clientJwtDecode', () => {
   it('should return an object', () => {
@@ -31,5 +42,28 @@ describe('classNames', () => {
   it('should return a string', () => {
     const classname = classNames('text-white bg-black');
     expect(classname).toBe('text-white bg-black');
+  });
+});
+
+describe('resolveSafeTypeToComponent', () => {
+  it('should render the SafeValCap component', () => {
+    const Component = resolveSafeTypeToComponent('cap');
+    const renderVal = render(<Component />);
+    expect(renderVal.getByText(/Post-Money/i)).toBeInTheDocument();
+  });
+  it('should render the SafeDiscount component', () => {
+    const Component = resolveSafeTypeToComponent('discount');
+    const renderVal = render(<Component />);
+    expect(renderVal.getByText(/Discount/i)).toBeInTheDocument();
+  });
+  it('should render the SafeMfn component', () => {
+    const Component = resolveSafeTypeToComponent('mfn');
+    const renderVal = render(<Component />);
+    expect(renderVal.getByText(/this safe/i)).toBeInTheDocument();
+  });
+  it('should render no component', () => {
+    const component = resolveSafeTypeToComponent('x012k');
+    const renderVal = render(component);
+    expect(null).not.toBeTruthy();
   });
 });
