@@ -36,7 +36,7 @@ import {
   fAQCardContent,
   footerItems,
   socials,
-  hostname,
+  entityUrl,
   teamContent,
   factSnippetsContent,
   newsletterContent,
@@ -63,7 +63,7 @@ export default function Funded() {
   // Create a new session
   useEffect(() => {
     // lookup local storage first
-    localforage.getItem(hostname).then((stateObj) => {
+    localforage.getItem(entityUrl).then((stateObj) => {
       if (!stateObj) {
         // create initial state in db using session identifier
         fetch("/api/session", {
@@ -78,7 +78,7 @@ export default function Funded() {
             if (typeof token !== "undefined") {
               const decoded = clientJwtDecode(token);
               setDecoded(decoded);
-              setState({ hostname: decoded });
+              setState({ entityUrl: decoded });
             }
           })
           .catch((error) => console.error(error.message));
@@ -97,7 +97,7 @@ export default function Funded() {
   useEffect(() => {
     if (state) {
       localforage
-        .setItem(hostname, state)
+        .setItem(entityUrl, state)
         .then(() => {})
         .catch((error) => console.error(error.message));
     }
