@@ -1,4 +1,4 @@
-export const hostname = "phund.vercel.app";
+export const hostname = "example.phund.xyz";
 export const entityTitle = "Phund";
 export const entityUrl = `https://${hostname}`;
 export const title = `${entityTitle} @ ${entityUrl}`;
